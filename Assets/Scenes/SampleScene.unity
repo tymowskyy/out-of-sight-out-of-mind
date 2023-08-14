@@ -918,7 +918,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1319811636}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e0ccb0c410365f741a1767a0b6af7ac2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -966,6 +966,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e031a9c3a8d6345db9879e4ea07bb3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxRunSpeed: 6
+  accelerationRate: 8
+  deccelerationRate: 10
+  jumpStrength: 7
+  coyoteTime: 0.2
+  maxJumpInputDelay: 0.15
+  jumpSqueezeScale: 0.9
+  landSquashScale: 0.9
+  landSquashAnimationTime: 0.1
+  peakGravityScale: 0.6
+  fallingGravityScale: 1.2
+  groundCheckPos: {fileID: 2092325025}
+  groundCheckSize: {x: 0.1, y: 0.1}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &1319811640
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1030,8 +1046,40 @@ Transform:
   m_LocalPosition: {x: 3.27, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2092325025}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2092325024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092325025}
+  m_Layer: 0
+  m_Name: stopki :3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092325025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092325024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1319811641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146442109
 GameObject:
@@ -1042,7 +1090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2146442110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '[ LEVEL ]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
