@@ -3,34 +3,11 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     private void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        peakGravityScale = GravityScale*0.5f;
-    }
-
-    private void FixedUpdate()
-    {
-        horizontalMovement();
-    }
-
-    private void horizontalMovement()
-    {
-        float targetSpeed = maxRunSpeed * horizontalInput;
-        float acceleration = accelerationRate;
-
-        if(Mathf.Abs(targetSpeed) < 0.1f)
-        {
-            acceleration = deccelerationRate;
-        }//else{
-         //   Climb(); shit.
-        //}
-
-        float forceToApply = (targetSpeed - rb.velocity.x) * acceleration;
-
-        rb.AddForce(Vector2.right * forceToApply, ForceMode2D.Force);
     }
 
     private void Update()
@@ -67,14 +44,34 @@ public class PlayerController : MonoBehaviour
             
             else if(rb.velocity.y < 0f)
             {
-                rb.gravityScale = GravityScale;
+                rb.gravityScale = fallingGravityScale;
             }
 
             else
             {
-                rb.gravityScale = GravityScale;
+                rb.gravityScale = 1f;
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        horizontalMovement();
+    }
+
+    private void horizontalMovement()
+    {
+        float targetSpeed = maxRunSpeed * horizontalInput;
+        float acceleration = accelerationRate;
+
+        if(Mathf.Abs(targetSpeed) < 0.1f)
+        {
+            acceleration = deccelerationRate;
+        }
+
+        float forceToApply = (targetSpeed - rb.velocity.x) * acceleration;
+
+        rb.AddForce(Vector2.right * forceToApply, ForceMode2D.Force);
     }
 
     private void jump()
@@ -101,33 +98,16 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded()
     {
-        return Physics2D.OverlapBox(groundCheckPos.position + (Vector3.down * groundCheckShift), groundCheckSize, 0f, groundLayer);
-    }
-    
-    private bool willFit(float step){
-        //print(groundCheckPos.position + (Vector3.right * wallCheckShift * horizontalInput)+(Vector3.up * step));
-        return !Physics2D.OverlapBox(groundCheckPos.position + (Vector3.right * wallCheckShift * horizontalInput)+(Vector3.up * step), groundCheckSize, 0f, groundLayer);
-    }
-    private void Climb()
-    {
-        if(willFit(0)){
-            return;
-        }
-        
-        for(float stepup = StepUpSize; stepup<=maxStepUp;stepup += StepUpSize){
-            if(willFit(stepup)){
-                rb.position=groundCheckPos.position+Vector3.up * stepup;
-                return;
-            }
-        }
+        return Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0f, groundLayer);
     }
 
     //Variables
+    private Rigidbody2D rb;
+    private float horizontalInput;
+
     private bool isJumping;
     private float jumpTimer;
     private float jumpInputTimer;
-    private Rigidbody2D rb;
-    private float horizontalInput;
 
     [Header("Run")]
     [SerializeField] private float maxRunSpeed;
@@ -139,17 +119,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float coyoteTime;
     [SerializeField] private float maxJumpInputDelay; //if you press the jump input maxJumpInputDelay seconds or less before hitting the ground,
                                                       //you will automatically jump on the next frame
-    [SerializeField] private float GravityScale;
-    private float peakGravityScale;
+    [SerializeField] private float peakGravityScale;
+    [SerializeField] private float fallingGravityScale;
 
     [Header("Checks")]
     [SerializeField] private Transform groundCheckPos;
     [SerializeField] private Vector2 groundCheckSize;
-    [SerializeField] private float groundCheckShift;
     [SerializeField] private LayerMask groundLayer;
-
-    [Header("StepUp")]
-    [SerializeField] private float wallCheckShift;
-    [SerializeField] private float maxStepUp;
-    [SerializeField] private float StepUpSize;
 }

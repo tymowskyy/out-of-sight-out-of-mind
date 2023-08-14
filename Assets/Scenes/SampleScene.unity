@@ -969,19 +969,16 @@ MonoBehaviour:
   maxRunSpeed: 8
   accelerationRate: 5
   deccelerationRate: 8
-  jumpStrength: 10
-  coyoteTime: 1
+  jumpStrength: 5
+  coyoteTime: 0.1
   maxJumpInputDelay: 0.25
-  GravityScale: 3
-  groundCheckPos: {fileID: 1319811641}
-  groundCheckSize: {x: 0.5, y: 1}
-  groundCheckShift: 0.25
+  peakGravityScale: 0.5
+  fallingGravityScale: 1
+  groundCheckPos: {fileID: 2092325025}
+  groundCheckSize: {x: 0.1, y: 0.1}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  wallCheckShift: 0.25
-  maxStepUp: 10
-  StepUpSize: 0.001
 --- !u!212 &1319811640
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1046,8 +1043,40 @@ Transform:
   m_LocalPosition: {x: 3.27, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2092325025}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2092325024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092325025}
+  m_Layer: 0
+  m_Name: JumpCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092325025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092325024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1319811641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146442109
 GameObject:
