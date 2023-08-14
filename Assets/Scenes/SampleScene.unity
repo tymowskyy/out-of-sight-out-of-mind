@@ -897,7 +897,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -918,7 +918,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1319811636}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e0ccb0c410365f741a1767a0b6af7ac2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -966,6 +966,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e031a9c3a8d6345db9879e4ea07bb3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxRunSpeed: 8
+  accelerationRate: 5
+  deccelerationRate: 8
+  jumpStrength: 10
+  coyoteTime: 1
+  maxJumpInputDelay: 0.25
+  GravityScale: 3
+  groundCheckPos: {fileID: 1319811641}
+  groundCheckSize: {x: 0.5, y: 1}
+  groundCheckShift: 0.25
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  wallCheckShift: 0.25
+  maxStepUp: 10
+  StepUpSize: 0.001
 --- !u!212 &1319811640
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1042,7 +1058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2146442110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '[ LEVEL ]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
