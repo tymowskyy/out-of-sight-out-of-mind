@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,9 @@ public class SegmentBehavior : MonoBehaviour
 {
     private void Awake()
     {
-        segmentCollider = GetComponent<Collider2D>();
+        lightSourceCount = 0;
 
+        segmentCollider = GetComponent<Collider2D>();
         segmentCollider.isTrigger = true;
     }
 
@@ -15,6 +17,7 @@ public class SegmentBehavior : MonoBehaviour
     {
         if (collision.CompareTag("LightSource"))
         {
+            lightSourceCount++;
             segmentCollider.isTrigger = false;
         }
     }
@@ -23,10 +26,16 @@ public class SegmentBehavior : MonoBehaviour
     {
         if (collision.CompareTag("LightSource"))
         {
-            segmentCollider.isTrigger = true;
+            lightSourceCount--;
+
+            if (lightSourceCount == 0)
+            {
+                segmentCollider.isTrigger = true;
+            }
         }
     }
 
-    private Collider2D segmentCollider;
 
+    private int lightSourceCount; //in how mant light sources are we
+    private Collider2D segmentCollider;
 }
