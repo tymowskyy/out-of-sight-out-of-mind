@@ -1,11 +1,15 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ClickableLightSource : MonoBehaviour
 {
     private void Awake()
     {
         parentCollider = transform.parent.GetComponent<Collider2D>();
+        parentLightSource = transform.parent.GetComponent<Light2D>();
+
         parentCollider.enabled = isActive;
+        parentLightSource.enabled = isActive;
     }
 
     void Update()
@@ -23,6 +27,7 @@ public class ClickableLightSource : MonoBehaviour
                     isActive = !isActive;
 
                     parentCollider.enabled = isActive;
+                    parentLightSource.enabled = isActive;
 
                     break;
                 }
@@ -31,6 +36,7 @@ public class ClickableLightSource : MonoBehaviour
     }
 
     private Collider2D parentCollider;
+    private Light2D parentLightSource;
 
     [SerializeField] private bool isActive;
 }
