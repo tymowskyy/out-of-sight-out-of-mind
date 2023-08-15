@@ -130,7 +130,17 @@ public class Movement : MonoBehaviour
 
     private bool isGrounded()
     {
-        return Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0f, groundLayer);
+        Collider2D[] results = Physics2D.OverlapBoxAll(groundCheckPos.position, groundCheckSize, 0f, groundLayer);
+
+        foreach(Collider2D hitCollider in results)
+        {
+            if(!hitCollider.isTrigger)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     //Variables
