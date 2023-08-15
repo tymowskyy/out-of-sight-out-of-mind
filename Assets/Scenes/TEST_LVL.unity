@@ -507,8 +507,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.9335499, y: -2.9161499, z: 0}
-    m_Extent: {x: 2.53405, y: 2.69045, z: 0}
+    m_Center: {x: -1.93715, y: -2.9565, z: 0}
+    m_Extent: {x: 2.53165, y: 2.6546998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1150,8 +1150,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.23399997, y: -2.0871, z: 0}
-    m_Extent: {x: 2.2667, y: 2.8642998, z: 0}
+    m_Center: {x: 0.2392, y: -2.0788999, z: 0}
+    m_Extent: {x: 2.2656999, y: 2.861, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1263,8 +1263,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.4648999, y: -1.6532001, z: 0}
-    m_Extent: {x: 3.1595998, y: 3.0453, z: 0}
+    m_Center: {x: 1.4749, y: -1.64665, z: 0}
+    m_Extent: {x: 3.1643999, y: 3.04115, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1498,6 +1498,7 @@ GameObject:
   - component: {fileID: 1700156463}
   - component: {fileID: 1700156461}
   - component: {fileID: 1700156464}
+  - component: {fileID: 1700156465}
   m_Layer: 0
   m_Name: Light 2D (3)
   m_TagString: LightSource
@@ -1581,8 +1582,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.5440999, y: -2.9775999, z: 0}
-    m_Extent: {x: 2.7508001, y: 2.6319, z: 0}
+    m_Center: {x: 0.5465499, y: -2.9728, z: 0}
+    m_Extent: {x: 2.74585, y: 2.6442, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1645,6 +1646,24 @@ PolygonCollider2D:
       - {x: 0.40481228, y: -0.38729736}
       - {x: -1.9704833, y: -5.38387}
   m_UseDelaunayMesh: 0
+--- !u!114 &1700156465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700156459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79be29469e4f71443a970e27253e2820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycles:
+  - repetitions: 17
+    repDuration: 0.1
+  - repetitions: 2
+    repDuration: 0.8
+  startsEnabled: 0
 --- !u!1 &1786175167
 GameObject:
   m_ObjectHideFlags: 0
