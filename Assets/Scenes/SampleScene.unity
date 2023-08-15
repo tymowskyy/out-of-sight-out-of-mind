@@ -721,7 +721,7 @@ Transform:
   m_GameObject: {fileID: 488848003}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalPosition: {x: 2.09, y: 1.47, z: 20}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 693894414}
   - component: {fileID: 693894413}
   m_Layer: 0
-  m_Name: Light
+  m_Name: PartialLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,8 +1024,8 @@ Transform:
   m_GameObject: {fileID: 693894412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.07, y: 1.4144844, z: 6.8277636}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: -17.23, y: 15.66, z: 6.8277636}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1770728087}
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 1060195923}
   - component: {fileID: 1060195922}
   m_Layer: 0
-  m_Name: Light2
+  m_Name: CircleLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1108,7 +1108,7 @@ Transform:
   m_GameObject: {fileID: 1060195921}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.1776323, y: 1.5244844, z: 6.8277636}
+  m_LocalPosition: {x: -8.64, y: 11.39, z: 6.8277636}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

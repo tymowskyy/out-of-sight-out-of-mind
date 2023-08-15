@@ -69,12 +69,14 @@ Material:
     - _EnableExternalAlpha: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _blend: 0.25
+    - _Tg: 1.57
+    - _blend: 1
     - _px_size: 13
-    - _radius: 0.3
+    - _radius: 2
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _Light: {r: 0, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _shift_origin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
