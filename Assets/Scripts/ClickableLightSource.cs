@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+//SEHR WICHTIG: this should be attached a CHILD of the light source, not the actual light source object itself
+//and also the object it is attached to should have a collider
 public class ClickableLightSource : MonoBehaviour
 {
     private void Awake()
