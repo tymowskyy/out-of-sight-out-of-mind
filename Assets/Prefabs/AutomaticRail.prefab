@@ -198,7 +198,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -339,3 +339,4 @@ MonoBehaviour:
   railEnd: {fileID: 4391642424102781615}
   head: {fileID: 5136009475500809434}
   frequency: 1
+  offset: 0
