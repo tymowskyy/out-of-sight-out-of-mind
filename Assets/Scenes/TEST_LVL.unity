@@ -507,8 +507,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.9298501, y: -2.92035, z: 0}
-    m_Extent: {x: 2.53895, y: 2.68685, z: 0}
+    m_Center: {x: -1.9378501, y: -2.95345, z: 0}
+    m_Extent: {x: 2.5289502, y: 2.65885, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1142,8 +1142,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.23865008, y: -2.0839, z: 0}
-    m_Extent: {x: 2.27405, y: 2.8625998, z: 0}
+    m_Center: {x: 0.23595, y: -2.08035, z: 0}
+    m_Extent: {x: 2.26175, y: 2.85285, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1255,8 +1255,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.4667499, y: -1.64785, z: 0}
-    m_Extent: {x: 3.16275, y: 3.0359502, z: 0}
+    m_Center: {x: 1.4689001, y: -1.65645, z: 0}
+    m_Extent: {x: 3.1668, y: 3.04435, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1576,8 +1576,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.54715, y: -2.9234002, z: 0}
-    m_Extent: {x: 2.75845, y: 2.6951, z: 0}
+    m_Center: {x: 0.5401, y: -2.9192, z: 0}
+    m_Extent: {x: 2.7505999, y: 2.7006001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2438,6 +2438,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2930875066356647246
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.5902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611683850839550172, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148632693843381171, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
+      propertyPath: m_Name
+      value: LightPickup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d1a506841c97d146adc839ce03657d0, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2445,3 +2502,4 @@ SceneRoots:
   - {fileID: 414117994}
   - {fileID: 516761731}
   - {fileID: 88972459}
+  - {fileID: 2930875066356647246}

@@ -46,6 +46,7 @@ public class ColliderSegmentation : MonoBehaviour
 
     public bool isCollidingWithPlayer()
     {
+        segmentsCollidingWithPlayer = Mathf.Clamp(segmentsCollidingWithPlayer, 0, numberOfSegmentsX * numberOfSegmentsY);
         return segmentsCollidingWithPlayer > 0;
     }
 
