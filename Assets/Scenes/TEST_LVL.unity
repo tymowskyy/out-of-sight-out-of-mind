@@ -507,8 +507,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.9378501, y: -2.95345, z: 0}
-    m_Extent: {x: 2.5289502, y: 2.65885, z: 0}
+    m_Center: {x: -1.93115, y: -2.91245, z: 0}
+    m_Extent: {x: 2.53615, y: 2.69015, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1142,8 +1142,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.23595, y: -2.08035, z: 0}
-    m_Extent: {x: 2.26175, y: 2.85285, z: 0}
+    m_Center: {x: 0.23500001, y: -2.0853002, z: 0}
+    m_Extent: {x: 2.2693, y: 2.8657, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1255,8 +1255,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.4689001, y: -1.65645, z: 0}
-    m_Extent: {x: 3.1668, y: 3.04435, z: 0}
+    m_Center: {x: 1.47445, y: -1.64675, z: 0}
+    m_Extent: {x: 3.16425, y: 3.03965, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1426,8 +1426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  connectedLightSources:
-  - {fileID: 1786175170}
+  connectedLightSources: []
 --- !u!212 &1508449848
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1576,8 +1575,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.5401, y: -2.9192, z: 0}
-    m_Extent: {x: 2.7505999, y: 2.7006001, z: 0}
+    m_Center: {x: 0.5526, y: -2.97385, z: 0}
+    m_Extent: {x: 2.7477999, y: 2.6401498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1740,8 +1739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  connectedLightSources:
-  - {fileID: 1508449847}
+  connectedLightSources: []
 --- !u!212 &1786175171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1844,8 +1842,8 @@ MonoBehaviour:
   segmentPrefab: {fileID: 3694362360244722131, guid: 06fe82aefbd09234ea84e3294deb08e8, type: 3}
   topLeftCorner: {fileID: 532520234}
   bottomRightCorner: {fileID: 16873190}
-  numberOfSegmentsX: 12
-  numberOfSegmentsY: 2
+  numberOfSegmentsX: 24
+  numberOfSegmentsY: 4
 --- !u!212 &1823536538
 SpriteRenderer:
   m_ObjectHideFlags: 0

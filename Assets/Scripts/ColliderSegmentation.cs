@@ -4,8 +4,6 @@ public class ColliderSegmentation : MonoBehaviour
 {
     private void Start()
     {
-        segmentsCollidingWithPlayer = 0;
-
         float platformWidth = bottomRightCorner.position.x - topLeftCorner.position.x;
         float platformHeight = topLeftCorner.position.y - bottomRightCorner.position.y;
 
@@ -25,33 +23,6 @@ public class ColliderSegmentation : MonoBehaviour
             }
         }
     }
-
-    public void OnSegmentTriggerEnterWithPlayer()
-    {
-        ///<summary>
-        ///Called when an inactive segment collides with player
-        /// </summary>
-        
-        segmentsCollidingWithPlayer++;
-    }
-
-    public void OnSegmentTriggerExitWithPlayer()
-    {
-        ///<summary>
-        ///Called when an inactive segment stops colliding with player
-        /// </summary>
-
-        segmentsCollidingWithPlayer--;
-    }
-
-    public bool isCollidingWithPlayer()
-    {
-        segmentsCollidingWithPlayer = Mathf.Clamp(segmentsCollidingWithPlayer, 0, numberOfSegmentsX * numberOfSegmentsY);
-        return segmentsCollidingWithPlayer > 0;
-    }
-
-
-    private int segmentsCollidingWithPlayer;
 
     [SerializeField] private GameObject segmentPrefab;
 
