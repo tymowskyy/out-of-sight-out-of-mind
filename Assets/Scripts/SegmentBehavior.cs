@@ -7,19 +7,20 @@ public class SegmentBehavior : MonoBehaviour
         lightSourceCount = 0;
 
         segmentCollider = GetComponent<Collider2D>();
-        segmentationManager = transform.parent.GetComponent<ColliderSegmentation>();
 
         segmentCollider.isTrigger = true;
+        collidingWithPlayer = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            segmentationManager.OnSegmentTriggerEnterWithPlayer();
+            collidingWithPlayer = true;
+            segmentCollider.isTrigger = true;
         }
 
-        else if (collision.CompareTag("LightSource") && !segmentationManager.isCollidingWithPlayer())
+        else if (collision.CompareTag("LightSource") && !collidingWithPlayer)
         {
             lightSourceCount++;
             segmentCollider.isTrigger = false;
@@ -30,12 +31,15 @@ public class SegmentBehavior : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            segmentationManager.OnSegmentTriggerExitWithPlayer();
+            collidingWithPlayer = false;
         }
 
         if (collision.CompareTag("LightSource"))
         {
             lightSourceCount--;
+
+            if(lightSourceCount > 0)
+                Debug.Log(lightSourceCount);
 
             if (lightSourceCount == 0)
             {
@@ -44,7 +48,7 @@ public class SegmentBehavior : MonoBehaviour
         }
     }
 
-    private ColliderSegmentation segmentationManager;
+    bool collidingWithPlayer;
 
     private int lightSourceCount; //in how mant light sources are we
     private Collider2D segmentCollider;
