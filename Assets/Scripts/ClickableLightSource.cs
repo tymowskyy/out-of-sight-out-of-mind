@@ -26,10 +26,8 @@ public class ClickableLightSource : MonoBehaviour
 
                 if (hit.collider.gameObject == gameObject)
                 {
-                    isActive = !isActive;
-
-                    parentCollider.enabled = isActive;
-                    parentLightSource.enabled = isActive;
+                    toggle();
+                    toggleConnected();
 
                     break;
                 }
@@ -37,8 +35,25 @@ public class ClickableLightSource : MonoBehaviour
         }
     }
 
+    public void toggle()
+    {
+        isActive = !isActive;
+
+        parentCollider.enabled = isActive;
+        parentLightSource.enabled = isActive;
+    }
+
+    private void toggleConnected()
+    {
+        foreach(ClickableLightSource connectedSource in connectedLightSources)
+        {
+            connectedSource.toggle();
+        }
+    }
+
     private Collider2D parentCollider;
     private Light2D parentLightSource;
 
     [SerializeField] private bool isActive;
+    [SerializeField] private ClickableLightSource[] connectedLightSources;
 }
