@@ -626,6 +626,88 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2053980596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &741878200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 741878201}
+  - component: {fileID: 741878203}
+  - component: {fileID: 741878202}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &741878201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741878200}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.39, y: -0.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2140110855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &741878202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741878200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010b7034501e3e441af4857b3c99570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  connectedLightSources: []
+--- !u!58 &741878203
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741878200}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &778714969
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,8 +748,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 88972459}
     m_Modifications:
     - target: {fileID: 2099239169295378390, guid: d50137d6dbb9e4729a8620d3ef201eb1, type: 3}
+      propertyPath: offset
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099239169295378390, guid: d50137d6dbb9e4729a8620d3ef201eb1, type: 3}
       propertyPath: frequency
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3867428418916274755, guid: d50137d6dbb9e4729a8620d3ef201eb1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -854,8 +940,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.46385, y: -1.6570499, z: 0}
-    m_Extent: {x: 3.16505, y: 3.04055, z: 0}
+    m_Center: {x: 1.4722501, y: -1.6566, z: 0}
+    m_Extent: {x: 3.1630502, y: 3.0422, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1618,7 +1704,8 @@ Transform:
   m_LocalPosition: {x: -0.37, y: 0.07928467, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 741878201}
   m_Father: {fileID: 136790414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2140110856
@@ -1730,8 +1817,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.5468, y: -2.9801, z: 0}
-    m_Extent: {x: 2.7536001, y: 2.6416, z: 0}
+    m_Center: {x: 0.54499996, y: -2.91675, z: 0}
+    m_Extent: {x: 2.7519999, y: 2.6939502, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
