@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LightSource
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Terrain
   - 
   - 
   - 
@@ -38,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bg
+    uniqueID: 265203653
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: clickablelight
+    uniqueID: 1778978885
+    locked: 0
+  - name: Player
+    uniqueID: 2621938865
     locked: 0
