@@ -87,6 +87,7 @@ public class Movement : MonoBehaviour
         float targetSpeed = maxRunSpeed * horizontalInput;
         float acceleration = accelerationRate;
 
+
         if(Mathf.Abs(targetSpeed) < 0.1f)
         {
             acceleration = deccelerationRate;
