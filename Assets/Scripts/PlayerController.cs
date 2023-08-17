@@ -65,6 +65,11 @@ public class Movement : MonoBehaviour
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            LevelManager.instance.RestartLevel();
+        }
+
         handleAnimation();
 
         lastFrameVelocity = rb.velocity;
