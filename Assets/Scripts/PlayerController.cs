@@ -73,6 +73,11 @@ public class Movement : MonoBehaviour
 
         lastFrameVelocity = rb.velocity;
         lastFramePosition = transform.position;
+
+        if(transform.position.y < deathYLevel)
+        {
+            LevelManager.instance.RestartLevel();
+        }
     }
 
     private void FixedUpdate()
@@ -168,6 +173,8 @@ public class Movement : MonoBehaviour
     private Vector3 lastFramePosition;
 
     [SerializeField] private GameObject playerSpriteObject; //the child gameobject responsible for the player's sprite and animations
+
+    [SerializeField] private float deathYLevel;
 
     [Header("Run")]
     [SerializeField] private float maxRunSpeed;

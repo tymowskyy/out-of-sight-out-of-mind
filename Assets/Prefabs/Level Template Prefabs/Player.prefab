@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpriteObject: {fileID: 5850973607473672994}
+  deathYLevel: -10
   maxRunSpeed: 6
   accelerationRate: 8
   deccelerationRate: 10
