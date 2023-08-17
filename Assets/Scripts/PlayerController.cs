@@ -68,11 +68,6 @@ public class Movement : MonoBehaviour
         {
             LevelManager.instance.RestartLevel();
         }
-        
-        if(Input.GetKeyDown(KeyCode.N))
-        {
-            LevelManager.instance.LoadNextLevel();
-        }
 
         handleAnimation();
 
