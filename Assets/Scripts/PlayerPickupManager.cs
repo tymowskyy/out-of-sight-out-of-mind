@@ -13,7 +13,8 @@ public class PlayerPickupManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.G))
         {
-            dropPickup();
+            if(currentPickup != null)
+                dropPickup();
         }
     }
 
