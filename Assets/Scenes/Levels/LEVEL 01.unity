@@ -123,54 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &124776277
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs/LightRectangle
-  m_Shader: {fileID: -6465566751694194690, guid: 92d5482845ed11b48bb3c5aedd22b04f, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Border: 2
-    - _Down: 1
-    - _Left: 0
-    - _QueueControl: -1
-    - _QueueOffset: 0
-    - _Right: 0
-    - _Up: 0
-    - _blend: 1
-    - _px_size: 16
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1001 &161991049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,54 +180,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f20d8a57401ae0b4bb99403ca7e4677e, type: 3}
---- !u!21 &257605518
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs/LightRectangle
-  m_Shader: {fileID: -6465566751694194690, guid: 92d5482845ed11b48bb3c5aedd22b04f, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Border: 2
-    - _Down: 1
-    - _Left: 0
-    - _QueueControl: -1
-    - _QueueOffset: 0
-    - _Right: 0
-    - _Up: 0
-    - _blend: 1
-    - _px_size: 16
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1001 &353689090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297697973708337350, guid: f5b4f38ea88b54ce09b4f12014ae767a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4297697973708337350, guid: f5b4f38ea88b54ce09b4f12014ae767a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -327,6 +231,10 @@ PrefabInstance:
     - target: {fileID: 4297697973708337350, guid: f5b4f38ea88b54ce09b4f12014ae767a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936457008301104302, guid: f5b4f38ea88b54ce09b4f12014ae767a, type: 3}
+      propertyPath: orthographic size
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -371,7 +279,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Border: 2
-    - _QueueControl: -1
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _Rotation: 2
     - _Rotation_180: 0
@@ -466,6 +374,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+--- !u!21 &566030597
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs/LightPartial
+  m_Shader: {fileID: -6465566751694194690, guid: aed4dd2199e5a024c9b5256d438a41af, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Border: 2
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _Rotation: 2
+    - _Rotation_180: 0
+    - _Tg: 2.21
+    - _blend: 1
+    - _px_size: 16
+    m_Colors:
+    - _shift_origin: {r: 0, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1001 &866779897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -588,6 +544,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873a9a785fd1b4fc2a3d1deff8d8a561, type: 3}
+--- !u!21 &988440534
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs/LightRectangle
+  m_Shader: {fileID: -6465566751694194690, guid: 92d5482845ed11b48bb3c5aedd22b04f, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Border: 2
+    - _Down: 1
+    - _Left: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Right: 0
+    - _Up: 0
+    - _blend: 1
+    - _px_size: 16
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1001 &1094431363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -722,6 +726,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37d0fcebd77bc4003be16912203979de, type: 3}
+--- !u!21 &1107630519
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs/LightRectangle
+  m_Shader: {fileID: -6465566751694194690, guid: 92d5482845ed11b48bb3c5aedd22b04f, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Border: 2
+    - _Down: 1
+    - _Left: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Right: 0
+    - _Up: 0
+    - _blend: 1
+    - _px_size: 16
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1001 &1277517536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -783,54 +835,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873a9a785fd1b4fc2a3d1deff8d8a561, type: 3}
---- !u!21 &1423082760
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs/LightPartial
-  m_Shader: {fileID: -6465566751694194690, guid: aed4dd2199e5a024c9b5256d438a41af, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Border: 2
-    - _QueueControl: -1
-    - _QueueOffset: 0
-    - _Rotation: 2
-    - _Rotation_180: 0
-    - _Tg: 2.21
-    - _blend: 1
-    - _px_size: 16
-    m_Colors:
-    - _shift_origin: {r: 0, g: 0.5, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!21 &1508730543
 Material:
   serializedVersion: 8
@@ -1492,6 +1496,10 @@ PrefabInstance:
       propertyPath: m_LocalBounds.m_Extent.y
       value: 0.50014997
       objectReference: {fileID: 0}
+    - target: {fileID: 4527540964742729162, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 566030597}
     - target: {fileID: 5070406290881339775, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

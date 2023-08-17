@@ -71,8 +71,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.0012499988, z: 0}
-    m_Extent: {x: 0.5, y: 0.50434995, z: 0}
+    m_Center: {x: -0.0029000044, y: 0.0023500025, z: 0}
+    m_Extent: {x: 0.4501, y: 0.50235, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -83,8 +83,11 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
+  - {x: -0.4472, y: -0.3944, z: 0}
+  - {x: -0.24243164, y: -0.4701, z: 0}
+  - {x: 0, y: -0.5, z: 0}
+  - {x: 0.2425, y: -0.4701, z: 0}
+  - {x: 0.4472, y: -0.3944, z: 0}
   - {x: 0, y: 0.5, z: 0}
   - {x: 0, y: 0.5, z: 0}
 --- !u!50 &2171344379263640188
@@ -159,8 +162,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
+      - {x: -0.4472, y: -0.3944}
+      - {x: -0.2425, y: -0.4701}
+      - {x: 0, y: -0.5}
+      - {x: 0.2425, y: -0.4701}
+      - {x: 0.4472, y: -0.3944}
   m_UseDelaunayMesh: 0
 --- !u!114 &4960089168937403189
 MonoBehaviour:
@@ -195,7 +201,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: aed4dd2199e5a024c9b5256d438a41af, type: 3}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
