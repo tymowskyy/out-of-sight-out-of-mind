@@ -38,9 +38,6 @@ public class SegmentBehavior : MonoBehaviour
         {
             lightSourceCount--;
 
-            if(lightSourceCount > 0)
-                Debug.Log(lightSourceCount);
-
             if (lightSourceCount == 0)
             {
                 segmentCollider.isTrigger = true;

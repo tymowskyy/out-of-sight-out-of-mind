@@ -38,6 +38,8 @@ public class PlayerPickupManager : MonoBehaviour
         pickupRigidbody = pickup.GetComponent<Rigidbody2D>();
 
         pickupPhysicsCollider.enabled = false;
+
+        pickupRigidbody.velocity = Vector3.zero;
         pickupRigidbody.bodyType = RigidbodyType2D.Kinematic;
     }
 
