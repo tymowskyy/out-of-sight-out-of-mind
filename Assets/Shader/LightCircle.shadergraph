@@ -1094,7 +1094,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "57079ce1b83c4af1aba4fa5d24b9ae6f",
     "m_Id": 0,
-    "m_DisplayName": "radius",
+    "m_DisplayName": "Border",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1664,10 +1664,10 @@
     "m_Guid": {
         "m_GuidSerialized": "da138848-e0a7-4042-83a9-3627a277f030"
     },
-    "m_Name": "radius",
+    "m_Name": "Border",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "radius",
-    "m_DefaultReferenceName": "_radius",
+    "m_RefNameGeneratedByDisplayName": "Border",
+    "m_DefaultReferenceName": "_Border",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2185,7 +2185,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 8.0,
+    "m_Value": 1.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,

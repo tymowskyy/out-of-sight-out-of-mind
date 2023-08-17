@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Light2
+  m_Name: LightCircle
   m_Shader: {fileID: -6465566751694194690, guid: 784c768dbb8dfb343a127ad580034241, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -66,12 +66,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Border: 1
     - _EnableExternalAlpha: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Tg: 1.57
-    - _blend: 1
-    - _px_size: 13
+    - _blend: 2
+    - _px_size: 16
     - _radius: 2
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
