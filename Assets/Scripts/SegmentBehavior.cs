@@ -17,13 +17,13 @@ public class SegmentBehavior : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             collidingWithPlayer = true;
-            segmentCollider.isTrigger = true;
         }
 
-        else if (collision.CompareTag("LightSource") && !collidingWithPlayer)
+        else if (collision.CompareTag("LightSource"))
         {
             lightSourceCount++;
-            segmentCollider.isTrigger = false;
+            if (!collidingWithPlayer)
+                segmentCollider.isTrigger = false;
         }
     }
 
@@ -32,6 +32,9 @@ public class SegmentBehavior : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             collidingWithPlayer = false;
+            if (lightSourceCount > 0) {
+                segmentCollider.isTrigger = false;
+            }
         }
 
         if (collision.CompareTag("LightSource"))
