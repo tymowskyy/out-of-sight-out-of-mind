@@ -4,7 +4,9 @@ public class Movement : MonoBehaviour
 {
     private void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         initializeDefaults();
     }
@@ -22,6 +24,17 @@ public class Movement : MonoBehaviour
 
         //Input
         horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        if(horizontalInput < 0f)
+        {
+            //if the player is trying to move to the left, flip him
+            spriteRenderer.flipX = true;
+        } 
+        
+        else if(horizontalInput > 0f)
+        {
+            spriteRenderer.flipX = false;
+        }
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -52,27 +65,12 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if(rb.velocity.y > 1.5f)
+        if(Input.GetKeyDown(KeyCode.R))
         {
-            transform.localScale = new Vector3(jumpSqueezeScale, defaultScale.y, defaultScale.z);
-        } 
-        
-        else if(Mathf.Abs(rb.velocity.y) < 0.2f && lastFrameVelocity.y < -1.5f)
-        {
-            landSquashTimer = landSquashAnimationTime;
-            transform.localScale = new Vector3(defaultScale.x, landSquashScale, defaultScale.z);
-            transform.position = new Vector3(transform.position.x, transform.position.y - defaultScale.y + landSquashScale, transform.position.z);
+            LevelManager.instance.RestartLevel();
         }
 
-        else if(landSquashTimer <= 0f)
-        {
-            if(transform.localScale.y == landSquashScale)
-            {
-                transform.position = new Vector3(lastFramePosition.x, lastFramePosition.y + 0.1f, lastFramePosition.z);
-            }
-
-            transform.localScale = defaultScale;
-        }
+        handleAnimation();
 
         lastFrameVelocity = rb.velocity;
         lastFramePosition = transform.position;
@@ -94,6 +92,7 @@ public class Movement : MonoBehaviour
         float targetSpeed = maxRunSpeed * horizontalInput;
         float acceleration = accelerationRate;
 
+
         if(Mathf.Abs(targetSpeed) < 0.1f)
         {
             acceleration = deccelerationRate;
@@ -106,6 +105,7 @@ public class Movement : MonoBehaviour
 
     private void jump()
     {
+        animator.SetTrigger("onJump");
         isJumping = true;
 
         float targetJumpForce = Mathf.Max(jumpStrength, jumpStrength - rb.velocity.y);
@@ -121,6 +121,12 @@ public class Movement : MonoBehaviour
         jumpTimer = Mathf.Max(jumpTimer, 0f);
         jumpInputTimer = Mathf.Max(jumpInputTimer, 0f);
         landSquashTimer = Mathf.Max(landSquashTimer, 0f);
+    }
+
+    private void handleAnimation()
+    {
+        animator.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("velocityY", rb.velocity.y);
     }
 
     private bool canJump()
@@ -145,6 +151,9 @@ public class Movement : MonoBehaviour
 
     //Variables
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
     private float horizontalInput;
 
     private bool isJumping;
