@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7424524801518965703}
   - component: {fileID: 1822557949535961717}
   - component: {fileID: 7773903865387475540}
+  - component: {fileID: 1361276351883822897}
   m_Layer: 0
   m_Name: Circular Light
   m_TagString: LightSource
@@ -70,8 +71,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0043500066, y: 0.006099999, z: 0}
-    m_Extent: {x: 0.52455, y: 0.5278, z: 0}
+    m_Center: {x: -0.00044998527, y: 0.0035000145, z: 0}
+    m_Extent: {x: 0.52895, y: 0.5325, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -241,3 +242,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1361276351883822897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767843268293229988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12059aab71f33c47bd4141931a91e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: -6465566751694194690, guid: 784c768dbb8dfb343a127ad580034241, type: 3}

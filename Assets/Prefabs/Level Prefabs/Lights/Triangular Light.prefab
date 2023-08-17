@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5992603202479533587}
   - component: {fileID: 4960089168937403189}
   - component: {fileID: 5070406290881339775}
+  - component: {fileID: 8670023569593916775}
   m_Layer: 0
   m_Name: Triangular Light
   m_TagString: LightSource
@@ -226,3 +227,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8670023569593916775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9020294317182177718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12059aab71f33c47bd4141931a91e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: -6465566751694194690, guid: aed4dd2199e5a024c9b5256d438a41af, type: 3}

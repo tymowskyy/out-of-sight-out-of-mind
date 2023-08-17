@@ -68,8 +68,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003399998, y: -0.00045001507, z: 0}
-    m_Extent: {x: 0.5324, y: 0.53735, z: 0}
+    m_Center: {x: -0.0027499795, y: -0.0009499788, z: 0}
+    m_Extent: {x: 0.53335, y: 0.53375, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 627292733393653288}
   - component: {fileID: 5999293342214226652}
   - component: {fileID: 8802356598438866003}
+  - component: {fileID: 6983066873657239460}
   m_Layer: 0
   m_Name: Light Pickup
   m_TagString: Pickup
@@ -384,3 +385,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6983066873657239460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7148632693843381171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12059aab71f33c47bd4141931a91e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: -6465566751694194690, guid: 784c768dbb8dfb343a127ad580034241, type: 3}
