@@ -86,14 +86,15 @@ MonoBehaviour:
   maxRunSpeed: 6
   accelerationRate: 8
   deccelerationRate: 10
-  jumpStrength: 7
+  jumpStrength: 12.2
   coyoteTime: 0.2
   maxJumpInputDelay: 0.15
   jumpSqueezeScale: 6
   landSquashScale: 6
   landSquashAnimationTime: 0
-  peakGravityScale: 0.6
-  fallingGravityScale: 1.2
+  peakGravityScale: 1.5
+  fallingGravityScale: 3
+  jumpGravityScale: 3.4
   groundCheckPos: {fileID: 3891161968883356140}
   groundCheckSize: {x: 0.1, y: 0.1}
   groundLayer:

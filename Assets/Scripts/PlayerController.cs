@@ -60,7 +60,7 @@ public class Movement : MonoBehaviour
 
             else
             {
-                rb.gravityScale = 1f;
+                rb.gravityScale = jumpGravityScale;
             }
         }
 
@@ -194,7 +194,7 @@ public class Movement : MonoBehaviour
     [Header("Gravity")]
     [SerializeField] private float peakGravityScale;
     [SerializeField] private float fallingGravityScale;
-
+    [SerializeField] private float jumpGravityScale;
 
     [Header("Checks")]
     [SerializeField] private Transform groundCheckPos;
