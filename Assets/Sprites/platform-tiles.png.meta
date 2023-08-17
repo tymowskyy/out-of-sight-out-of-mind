@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b5d9ce61bc6656a4c83ddb9f396fb451
+guid: 596e8922955b60047ba5912327ebde5c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,11 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character-jump-Sheet_0
+      name: platform-tiles_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -124,18 +124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3636d085404a25a4992ec8f0f76168e5
-      internalID: -983266855
+      spriteID: 384b9904414b1414b959d6ad65fa4856
+      internalID: 175224650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_1
+      name: platform-tiles_1
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -145,18 +145,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f09a0dc5ace6bb24d9303fe5cdeafe95
-      internalID: 306290196
+      spriteID: 6de83e9971c28824697a589485e15b3d
+      internalID: 1735241503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_2
+      name: platform-tiles_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -166,18 +166,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d8378750769a7c4480d4e0ef99a8994
-      internalID: 1866647690
+      spriteID: 168de92c84e7dff47a0fc5a7aee5c88d
+      internalID: -1417533724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_3
+      name: platform-tiles_3
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -187,18 +187,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dc96cc58fed91d48a189a0adba5912f
-      internalID: -114871843
+      spriteID: ba5b6618d0d5a89408f5b4729dc3d34c
+      internalID: -448531157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_4
+      name: platform-tiles_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 0
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -208,18 +208,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff5a89c8447db7c419d12de45a094421
-      internalID: -125036617
+      spriteID: 900d8a14fee8e41438d7ff23b40a02e0
+      internalID: 194322006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_5
+      name: platform-tiles_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
+        x: 16
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -229,18 +229,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a25ed84b9a50775478f1e2d0a47ce992
-      internalID: -1333169630
+      spriteID: f66a30b839ed1874ba781b0fa6eef05b
+      internalID: 347888245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_6
+      name: platform-tiles_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 0
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -250,18 +250,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f60b4bf707e8d6746bb8a51e3bc5a800
-      internalID: -2124893634
+      spriteID: db5a65e7266aa1c49bb1033209946caa
+      internalID: 1780532190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_7
+      name: platform-tiles_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 0
+        x: 16
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -271,18 +271,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 804dada96abcf3f44a31c0be0c06eba5
-      internalID: -529854870
+      spriteID: 6727341e2cfae8e4180609da76630a75
+      internalID: 1822248142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_8
+      name: platform-tiles_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 32
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -292,18 +292,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b43157980e81134b93fbf6cdd198752
-      internalID: 1234059558
+      spriteID: d969e57cb912d1a429c6664154e77209
+      internalID: 558849933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_9
+      name: platform-tiles_9
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
+        x: 48
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -313,18 +313,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1e3a6c8a4139f846adab6c7095f2fe9
-      internalID: 264816162
+      spriteID: 3d59fde0a043df647be4b36ec97e6aa5
+      internalID: -2059588406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-jump-Sheet_10
+      name: platform-tiles_10
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
+        x: 0
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -334,8 +334,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7461ea76bdde7b34fbbe47c96212c258
-      internalID: -864764715
+      spriteID: 186a3f675109eec489aac3478f3776bf
+      internalID: -1603391784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8808c95480a004aa6ffe8d217691b7
+      internalID: 1285156710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634a06fdb24636c4084f2eafa33bad85
+      internalID: 1343873511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ad127178da09c45a3ba482121fd236
+      internalID: -237506256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b7922af3fe9924397542b93ca6495e
+      internalID: -1724816171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5532e1361ebc12c4baa0cb8fa76d3c55
+      internalID: -1046095131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e471ac78cd6622419b7f06888a40ec7
+      internalID: -1477994821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da966ecf0d602964b8b6a962797ae448
+      internalID: -354188831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_18
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92eb72490de409f4396b4f59b77ce083
+      internalID: -1383999215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform-tiles_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c0c45989499d04c9117c8fdf8c1b7b
+      internalID: -771951164
       vertices: []
       indices: 
       edges: []
@@ -351,17 +540,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character-jump-Sheet_0: -983266855
-      character-jump-Sheet_1: 306290196
-      character-jump-Sheet_10: -864764715
-      character-jump-Sheet_2: 1866647690
-      character-jump-Sheet_3: -114871843
-      character-jump-Sheet_4: -125036617
-      character-jump-Sheet_5: -1333169630
-      character-jump-Sheet_6: -2124893634
-      character-jump-Sheet_7: -529854870
-      character-jump-Sheet_8: 1234059558
-      character-jump-Sheet_9: 264816162
+      platform-tiles_0: 175224650
+      platform-tiles_1: 1735241503
+      platform-tiles_10: -1603391784
+      platform-tiles_11: 1285156710
+      platform-tiles_12: 1343873511
+      platform-tiles_13: -237506256
+      platform-tiles_14: -1724816171
+      platform-tiles_15: -1046095131
+      platform-tiles_16: -1477994821
+      platform-tiles_17: -354188831
+      platform-tiles_18: -1383999215
+      platform-tiles_19: -771951164
+      platform-tiles_2: -1417533724
+      platform-tiles_3: -448531157
+      platform-tiles_4: 194322006
+      platform-tiles_5: 347888245
+      platform-tiles_6: 1780532190
+      platform-tiles_7: 1822248142
+      platform-tiles_8: 558849933
+      platform-tiles_9: -2059588406
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
