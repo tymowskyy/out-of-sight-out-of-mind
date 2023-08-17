@@ -53,4 +53,4 @@ MonoBehaviour:
     instantiationMode: 0
   templatePipeline: {fileID: 0}
   badge: {fileID: 0}
-  addToDefaults: 0
+  addToDefaults: 1
