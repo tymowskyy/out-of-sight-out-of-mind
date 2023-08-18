@@ -6,6 +6,11 @@ public class LevelManager : MonoBehaviour
 {
     private void Awake()
     {
+        if(instance != null)
+        {
+            Destroy(gameObject);
+        }
+
         instance = this;
         currentLevel = 0;
 
