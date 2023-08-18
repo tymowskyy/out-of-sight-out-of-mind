@@ -7,24 +7,31 @@ using UnityEngine;
 [RequireComponent(typeof(Light2D))]
 public class LightSource : MonoBehaviour
 {
-    [SerializeField] private bool defaultOn;
-
-    private bool isOn;
-    private Collider2D colliderComp;
-    private Light2D lightComp;
-
     void Awake()
     {
         colliderComp = GetComponent<Collider2D>();
         lightComp = GetComponent<Light2D>();
-        isOn = defaultOn;
-        colliderComp.enabled = isOn;
-        lightComp.enabled = isOn;
+        on = defaultOn;
+        colliderComp.enabled = on;
+        lightComp.enabled = on;
     }
 
     public void toggle() {
-        isOn = !isOn;
-        colliderComp.enabled = isOn;
-        lightComp.enabled = isOn;
+        on = !on;
+        colliderComp.enabled = on;
+        lightComp.enabled = on;
     }
+
+    public bool isOn()
+    {
+        return on;
+    }
+
+    public SpriteRenderer lightBulbTexture;
+
+    [SerializeField] private bool defaultOn;
+
+    private bool on;
+    private Collider2D colliderComp;
+    private Light2D lightComp;
 }

@@ -135,7 +135,10 @@ public class Movement : MonoBehaviour
         animator.SetTrigger("onJump");
         isJumping = true;
 
-        audioSource.clip = jumpSound;
+        if (audioSource.clip.name != jumpSound.name)
+        {
+            audioSource.clip = jumpSound;
+        }
         audioSource.loop = false;
         audioSource.Play();
 
@@ -182,7 +185,7 @@ public class Movement : MonoBehaviour
 
     private bool shouldPlayRunSound()
     {
-        bool isPlayingAlready = audioSource.isPlaying && audioSource.clip == walkSound;
+        bool isPlayingAlready = audioSource.isPlaying && audioSource.clip.name == walkSound.name;
         bool isLooped = audioSource.loop;
         bool isMovingX = Mathf.Abs(rb.velocity.x) > 0f;
 

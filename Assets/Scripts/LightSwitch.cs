@@ -5,9 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class LightSwitch : MonoBehaviour
 {
-    [SerializeField] private LightSource[] lightSources;
+    private void Start()
+    {
+        foreach(LightSource lightSource in lightSources)
+        {
+            setLightBulbTexture(lightSource);
+        }
+    }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -22,6 +28,24 @@ public class LightSwitch : MonoBehaviour
         foreach(LightSource lightSource in lightSources)
         {
             lightSource.toggle();
+
+            setLightBulbTexture(lightSource);
         }
     }
+
+    private void setLightBulbTexture(LightSource lightSource)
+    {
+        if (lightSource.isOn())
+        {
+            lightSource.lightBulbTexture.sprite = onTexture;
+        }
+        else
+        {
+            lightSource.lightBulbTexture.sprite = offTexture;
+        }
+    }
+
+    [SerializeField] private LightSource[] lightSources;
+    [SerializeField] private Sprite onTexture;
+    [SerializeField] private Sprite offTexture;
 }
