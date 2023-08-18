@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -6,6 +7,8 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = playerSpriteObject.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        groundedThisFrame = false;
 
         initializeDefaults();
     }
@@ -14,8 +17,9 @@ public class Movement : MonoBehaviour
     {
         //Timers
         updateTimers();
+        groundedThisFrame = isGrounded();
 
-        if(isGrounded() && rb.velocity.y <= 0f)
+        if(groundedThisFrame && rb.velocity.y <= 0f)
         {
             isJumping = false;
             jumpTimer = coyoteTime;
@@ -24,15 +28,34 @@ public class Movement : MonoBehaviour
         //Input
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        if(horizontalInput < 0f)
+        if (horizontalInput != 0f)
         {
-            //if the player is trying to move to the left, flip him
-            transform.localScale = new Vector2(-1 * Mathf.Abs(transform.localScale.x), transform.localScale.y);
+            if(shouldPlayRunSound())
+            {
+                audioSource.loop = true;
+                audioSource.clip = walkSound;
+                audioSource.Play();
+            }
+
+            if (horizontalInput < 0f)
+            {
+                //if the player is trying to move to the left, flip him
+                transform.localScale = new Vector2(-1 * Mathf.Abs(transform.localScale.x), transform.localScale.y);
+            }
+
+            else if (horizontalInput > 0f)
+            {
+                transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+            }
         } 
         
-        else if(horizontalInput > 0f)
-        {
-            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        if(horizontalInput == 0f || !groundedThisFrame)
+        {        
+            if(audioSource.isPlaying && audioSource.clip == walkSound)
+            {
+                audioSource.loop = false;
+                audioSource.Pause();
+            }
         }
 
         if(Input.GetKeyDown(KeyCode.Space))
@@ -97,7 +120,6 @@ public class Movement : MonoBehaviour
         float targetSpeed = maxRunSpeed * horizontalInput;
         float acceleration = accelerationRate;
 
-
         if(Mathf.Abs(targetSpeed) < 0.1f)
         {
             acceleration = deccelerationRate;
@@ -112,6 +134,10 @@ public class Movement : MonoBehaviour
     {
         animator.SetTrigger("onJump");
         isJumping = true;
+
+        audioSource.clip = jumpSound;
+        audioSource.loop = false;
+        audioSource.Play();
 
         float targetJumpForce = Mathf.Max(jumpStrength, jumpStrength - rb.velocity.y);
         rb.AddForce(Vector2.up * targetJumpForce, ForceMode2D.Impulse);
@@ -154,13 +180,25 @@ public class Movement : MonoBehaviour
         return false;
     }
 
+    private bool shouldPlayRunSound()
+    {
+        bool isPlayingAlready = audioSource.isPlaying && audioSource.clip == walkSound;
+        bool isLooped = audioSource.loop;
+        bool isMovingX = Mathf.Abs(rb.velocity.x) > 0f;
+
+        return isMovingX && groundedThisFrame && (!isPlayingAlready || !isLooped) && !isJumping;
+    }
+
     //Variables
     private Rigidbody2D rb;
     private Animator animator;
+    private AudioSource audioSource;
 
     private float horizontalInput;
 
+    private bool groundedThisFrame;
     private bool isJumping;
+
     private float jumpTimer;
     private float jumpInputTimer;
 
@@ -201,4 +239,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private Transform groundCheckPos;
     [SerializeField] private Vector2 groundCheckSize;
     [SerializeField] private LayerMask groundLayer;
+
+    [Header("SoundEffects")]
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip walkSound;
+    [SerializeField] private AudioClip deathSound;
 }
