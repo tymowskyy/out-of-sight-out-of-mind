@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4960089168937403189}
   - component: {fileID: 5070406290881339775}
   - component: {fileID: 8670023569593916775}
+  - component: {fileID: 7556641046485463806}
   m_Layer: 0
   m_Name: Triangular Light
   m_TagString: LightSource
@@ -71,8 +72,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0029000044, y: 0.0023500025, z: 0}
-    m_Extent: {x: 0.4501, y: 0.50235, z: 0}
+    m_Center: {x: -0.00395, y: 0.0013999939, z: 0}
+    m_Extent: {x: 0.45115, y: 0.5014, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -246,3 +247,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: -6465566751694194690, guid: aed4dd2199e5a024c9b5256d438a41af, type: 3}
+--- !u!114 &7556641046485463806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9020294317182177718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468b27a8f6b311349a2b8fc46ecafb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 2815859930331055877}
