@@ -272,6 +272,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3091311665425718506, guid: 55683d83626d37d45a3c3c4a84085211, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3839464356950170940, guid: 55683d83626d37d45a3c3c4a84085211, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -355,6 +359,18 @@ PrefabInstance:
     - target: {fileID: 4871024006405263488, guid: 55683d83626d37d45a3c3c4a84085211, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110426214406858122, guid: 55683d83626d37d45a3c3c4a84085211, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e3c889dadd5e4347a83a8cf14cd76a4, type: 2}
+    - target: {fileID: 5110426214406858122, guid: 55683d83626d37d45a3c3c4a84085211, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3675773870454192210, guid: 8e3c889dadd5e4347a83a8cf14cd76a4, type: 2}
+    - target: {fileID: 5110426214406858122, guid: 55683d83626d37d45a3c3c4a84085211, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
