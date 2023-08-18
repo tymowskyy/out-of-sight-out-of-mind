@@ -1695,6 +1695,7 @@ MonoBehaviour:
   - LEVEL 03
   - LEVEL 04
   - LEVEL 05
+  - LEVEL 06
 --- !u!4 &2005448791
 Transform:
   m_ObjectHideFlags: 0
