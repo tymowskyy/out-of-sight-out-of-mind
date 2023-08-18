@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class SegmentBehavior : MonoBehaviour
 {
+    private bool[] isCollidingWithPlayerOffset = new bool[16];
+    private PlayerStickingController stickingController;
     private void Awake()
     {
+        stickingController = GameObject.FindWithTag("Player").GetComponent<PlayerStickingController>();
         lightSourceCount = 0;
 
         segmentCollider = GetComponent<Collider2D>();
@@ -22,10 +25,29 @@ public class SegmentBehavior : MonoBehaviour
         else if (collision.CompareTag("LightSource"))
         {
             lightSourceCount++;
-            if (!collidingWithPlayer)
+            if (lightSourceCount == 1)
+            {
                 segmentCollider.isTrigger = false;
-            else
-                transform.parent.gameObject.GetComponent<PlayerUnsticking>().OnPlayerStick();
+                for(int i=0; i<isCollidingWithPlayerOffset.Length; ++i)
+                {
+                    if(isCollidingWithPlayerOffset[i])
+                    {
+                        stickingController.colliderSegmentCount[i]++;
+                    }
+                }
+            }
+            if(collidingWithPlayer)
+            {
+                stickingController.OnPlayerStick();
+            }
+        }
+
+        else if (collision.CompareTag("PlayerColliderOffset"))
+        {
+            int colliderIndex = collision.gameObject.GetComponent<PlayerColliderOffset>().index;
+            isCollidingWithPlayerOffset[colliderIndex] = true;
+            if (!segmentCollider.isTrigger)
+                stickingController.colliderSegmentCount[colliderIndex]++;
         }
     }
 
@@ -34,19 +56,30 @@ public class SegmentBehavior : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             collidingWithPlayer = false;
-            if (lightSourceCount > 0) {
-                segmentCollider.isTrigger = false;
-            }
         }
 
-        if (collision.CompareTag("LightSource"))
+        else if (collision.CompareTag("LightSource"))
         {
             lightSourceCount--;
 
             if (lightSourceCount == 0)
             {
                 segmentCollider.isTrigger = true;
+                for(int i=0; i<isCollidingWithPlayerOffset.Length; ++i)
+                {
+                    if(isCollidingWithPlayerOffset[i])
+                    {
+                        stickingController.colliderSegmentCount[i]--;
+                    }
+                }      
             }
+        }
+        else if (collision.CompareTag("PlayerColliderOffset"))
+        {
+            int colliderIndex = collision.gameObject.GetComponent<PlayerColliderOffset>().index;
+            isCollidingWithPlayerOffset[colliderIndex] = false; 
+            if (!segmentCollider.isTrigger)
+                stickingController.colliderSegmentCount[colliderIndex]--;
         }
     }
 

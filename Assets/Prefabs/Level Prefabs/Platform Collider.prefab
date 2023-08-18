@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 1863538441293745416}
   - component: {fileID: 2479380350190974429}
   - component: {fileID: 3491137988073045809}
-  - component: {fileID: 4186354017667721204}
   m_Layer: 8
   m_Name: Platform Collider
   m_TagString: Untagged
@@ -160,18 +159,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4186354017667721204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4470899404836552461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d71bd78018a5e45bdb25c2ba52bb83da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topLeftCorner: {fileID: 6857034602939620097}
-  bottomRightCorner: {fileID: 8661449842938918313}
-  maxUnstickDistance: 0.3
