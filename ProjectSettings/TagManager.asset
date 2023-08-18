@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LightSource
   - Pickup
+  - PlayerColliderOffset
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - Terrain
   - 
-  - 
+  - Ignore All But Terrain
   - 
   - 
   - 
