@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LightSource
   - Pickup
+  - PlayerColliderOffset
   - Music
   - LevelManager
   layers:
@@ -19,7 +20,7 @@ TagManager:
   - 
   - Terrain
   - 
-  - 
+  - Ignore All But Terrain
   - 
   - 
   - 
