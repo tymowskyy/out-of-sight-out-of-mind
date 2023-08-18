@@ -1,12 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SegmentBehavior : MonoBehaviour
 {
-    private bool[] isCollidingWithPlayerOffset = new bool[24];
+    private List<bool> isCollidingWithPlayerOffset = new List<bool>();
     private PlayerStickingController stickingController;
     private void Awake()
     {
         stickingController = GameObject.FindWithTag("Player").GetComponent<PlayerStickingController>();
+
+        for (int i=0; i<stickingController.colliderOffsets.Length; ++i)
+            isCollidingWithPlayerOffset.Add(false);
+
         lightSourceCount = 0;
 
         segmentCollider = GetComponent<Collider2D>();
@@ -28,7 +33,7 @@ public class SegmentBehavior : MonoBehaviour
             if (lightSourceCount == 1)
             {
                 segmentCollider.isTrigger = false;
-                for(int i=0; i<isCollidingWithPlayerOffset.Length; ++i)
+                for(int i=0; i<isCollidingWithPlayerOffset.Count; ++i)
                 {
                     if(isCollidingWithPlayerOffset[i])
                     {
@@ -65,7 +70,7 @@ public class SegmentBehavior : MonoBehaviour
             if (lightSourceCount == 0)
             {
                 segmentCollider.isTrigger = true;
-                for(int i=0; i<isCollidingWithPlayerOffset.Length; ++i)
+                for(int i=0; i<isCollidingWithPlayerOffset.Count; ++i)
                 {
                     if(isCollidingWithPlayerOffset[i])
                     {
