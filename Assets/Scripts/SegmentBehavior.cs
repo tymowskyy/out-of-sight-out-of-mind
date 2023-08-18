@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SegmentBehavior : MonoBehaviour
 {
-    private bool[] isCollidingWithPlayerOffset = new bool[16];
+    private bool[] isCollidingWithPlayerOffset = new bool[24];
     private PlayerStickingController stickingController;
     private void Awake()
     {

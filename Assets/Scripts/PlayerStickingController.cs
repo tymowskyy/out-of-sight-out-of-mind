@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStickingController : MonoBehaviour
 {
     public PlayerColliderOffset[] colliderOffsets;
-    public int[] colliderSegmentCount = new int[16];
+    public int[] colliderSegmentCount = new int[24];
     private bool isStuck = false;
 
     void Awake()
