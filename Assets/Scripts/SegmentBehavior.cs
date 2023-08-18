@@ -24,6 +24,8 @@ public class SegmentBehavior : MonoBehaviour
             lightSourceCount++;
             if (!collidingWithPlayer)
                 segmentCollider.isTrigger = false;
+            else
+                transform.parent.gameObject.GetComponent<PlayerUnsticking>().OnPlayerStick();
         }
     }
 
