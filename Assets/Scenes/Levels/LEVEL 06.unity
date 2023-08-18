@@ -508,6 +508,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rectangular Light
       objectReference: {fileID: 0}
+    - target: {fileID: 2891721885484351404, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+      propertyPath: m_Size.x
+      value: 5.5200734
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891721885484351404, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.9655797
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891721885484351404, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.6554751
+      objectReference: {fileID: 0}
     - target: {fileID: 6791472721129517020, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -557,20 +569,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 1.4696001
+      value: 1.0083499
       objectReference: {fileID: 0}
     - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: -1.6530001
+      value: -1.65005
       objectReference: {fileID: 0}
     - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 3.1699
+      value: 3.16995
       objectReference: {fileID: 0}
     - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 3.0438
+      value: 2.57515
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+      propertyPath: m_ShapePath.Array.data[0].x
+      value: -2.071692
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+      propertyPath: m_ShapePath.Array.data[0].y
+      value: -4.1350975
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+      propertyPath: m_ShapePath.Array.data[3].x
+      value: -1.9363005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740206967739246753, guid: 9f535be176a314065978330eb2e0e2fb, type: 3}
+      propertyPath: m_ShapePath.Array.data[3].y
+      value: 0.83711475
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
