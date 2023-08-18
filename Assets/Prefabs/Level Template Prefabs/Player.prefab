@@ -87,7 +87,7 @@ MonoBehaviour:
   accelerationRate: 8
   deccelerationRate: 10
   jumpStrength: 10
-  coyoteTime: 0.2
+  coyoteTime: 0.15
   maxJumpInputDelay: 0.15
   jumpSqueezeScale: 6
   landSquashScale: 6
