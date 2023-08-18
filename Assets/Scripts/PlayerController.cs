@@ -53,15 +53,16 @@ public class Movement : MonoBehaviour
                 rb.gravityScale = peakGravityScale;
             } 
             
-            else if(rb.velocity.y < 0f)
-            {
-                rb.gravityScale = fallingGravityScale;
-            }
 
             else
             {
                 rb.gravityScale = jumpGravityScale;
             }
+        }
+
+        if(rb.velocity.y < 0f)
+        {
+            rb.gravityScale = fallingGravityScale;
         }
 
         if(Input.GetKeyDown(KeyCode.R))
