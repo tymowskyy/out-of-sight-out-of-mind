@@ -58,3 +58,6 @@ TagManager:
   - name: Pickup
     uniqueID: 211740675
     locked: 0
+  - name: Door
+    uniqueID: 4263703531
+    locked: 0
