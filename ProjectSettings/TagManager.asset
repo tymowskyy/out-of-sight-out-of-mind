@@ -55,3 +55,6 @@ TagManager:
   - name: Rail
     uniqueID: 3083342005
     locked: 0
+  - name: Pickup
+    uniqueID: 211740675
+    locked: 0
