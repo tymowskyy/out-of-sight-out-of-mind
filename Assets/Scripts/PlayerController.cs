@@ -5,8 +5,7 @@ public class Movement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = playerSpriteObject.GetComponent<Animator>();
 
         initializeDefaults();
     }
@@ -28,12 +27,12 @@ public class Movement : MonoBehaviour
         if(horizontalInput < 0f)
         {
             //if the player is trying to move to the left, flip him
-            spriteRenderer.flipX = true;
+            transform.localScale = new Vector2(-1 * Mathf.Abs(transform.localScale.x), transform.localScale.y);
         } 
         
         else if(horizontalInput > 0f)
         {
-            spriteRenderer.flipX = false;
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
 
         if(Input.GetKeyDown(KeyCode.Space))
@@ -61,7 +60,7 @@ public class Movement : MonoBehaviour
 
             else
             {
-                rb.gravityScale = 1f;
+                rb.gravityScale = jumpGravityScale;
             }
         }
 
@@ -74,6 +73,11 @@ public class Movement : MonoBehaviour
 
         lastFrameVelocity = rb.velocity;
         lastFramePosition = transform.position;
+
+        if(transform.position.y < deathYLevel)
+        {
+            LevelManager.instance.RestartLevel();
+        }
     }
 
     private void FixedUpdate()
@@ -151,7 +155,6 @@ public class Movement : MonoBehaviour
 
     //Variables
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
     private Animator animator;
 
     private float horizontalInput;
@@ -168,6 +171,10 @@ public class Movement : MonoBehaviour
 
     private Vector2 lastFrameVelocity;
     private Vector3 lastFramePosition;
+
+    [SerializeField] private GameObject playerSpriteObject; //the child gameobject responsible for the player's sprite and animations
+
+    [SerializeField] private float deathYLevel;
 
     [Header("Run")]
     [SerializeField] private float maxRunSpeed;
@@ -187,7 +194,7 @@ public class Movement : MonoBehaviour
     [Header("Gravity")]
     [SerializeField] private float peakGravityScale;
     [SerializeField] private float fallingGravityScale;
-
+    [SerializeField] private float jumpGravityScale;
 
     [Header("Checks")]
     [SerializeField] private Transform groundCheckPos;

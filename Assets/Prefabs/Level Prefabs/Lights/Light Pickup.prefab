@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5415373736789129280}
   - component: {fileID: 6693784603168214243}
   - component: {fileID: 5931544751642500804}
+  - component: {fileID: 9091535821498331914}
   m_Layer: 0
   m_Name: LightSource
   m_TagString: LightSource
@@ -68,8 +69,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0027499795, y: -0.0009499788, z: 0}
-    m_Extent: {x: 0.53335, y: 0.53375, z: 0}
+    m_Center: {x: -0.004000008, y: 0.0016500056, z: 0}
+    m_Extent: {x: 0.5344, y: 0.53335, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -199,6 +200,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9091535821498331914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410300514410717212}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12059aab71f33c47bd4141931a91e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: -6465566751694194690, guid: 784c768dbb8dfb343a127ad580034241, type: 3}
 --- !u!1 &7148632693843381171
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +226,6 @@ GameObject:
   - component: {fileID: 627292733393653288}
   - component: {fileID: 5999293342214226652}
   - component: {fileID: 8802356598438866003}
-  - component: {fileID: 6983066873657239460}
   m_Layer: 0
   m_Name: Light Pickup
   m_TagString: Pickup
@@ -230,7 +243,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.65, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1401050494586167049}
@@ -274,11 +287,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 211740675
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f88a7d567816e5744bf62d2be09fd7b7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -385,16 +398,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6983066873657239460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7148632693843381171}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d12059aab71f33c47bd4141931a91e87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: -6465566751694194690, guid: 784c768dbb8dfb343a127ad580034241, type: 3}

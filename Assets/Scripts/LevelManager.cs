@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
         }
 
         SceneManager.LoadScene(levelSceneNames[currentLevel+1]);
+        currentLevel++;
     }
 
     public void RestartLevel()
