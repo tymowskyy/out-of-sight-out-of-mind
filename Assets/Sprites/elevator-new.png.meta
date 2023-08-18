@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 37b6820b50cbc418dae73cb0cc97c690
+guid: 7ffbb2da52391de4795587dcc545da7e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,19 +81,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_0
+      name: elevator-new_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1137483fc7c314ee59ef6bde7f46da38
-      internalID: 1654682543
+      spriteID: f5948c8e5f77a7549bb0833c8415a107
+      internalID: -1546563293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_1
+      name: elevator-new_1
       rect:
         serializedVersion: 2
         x: 16
@@ -158,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53025e99deac245a1a809038e35da3ee
-      internalID: 1851649687
+      spriteID: 494be623c51d496419f2b57cd77374cc
+      internalID: 1412382888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_2
+      name: elevator-new_2
       rect:
         serializedVersion: 2
         x: 32
@@ -179,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f80a928a8aa354e759c281d8b13b4d09
-      internalID: -1820489175
+      spriteID: b99548cce249c2b4aad31e3b3c6449c8
+      internalID: -92253720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_3
+      name: elevator-new_3
       rect:
         serializedVersion: 2
         x: 48
@@ -200,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fd5738878ede4becbb6333baa7b4ed0
-      internalID: 10732892
+      spriteID: 4ec79a66552997144b538a7da58374b4
+      internalID: -567162497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_4
+      name: elevator-new_4
       rect:
         serializedVersion: 2
         x: 64
@@ -221,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52af82ed5a68e4cd5a2caea26eb9813b
-      internalID: -1765165957
+      spriteID: bc91dc9d1598e804b97b3c2da5d3dbbb
+      internalID: -2106762717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_5
+      name: elevator-new_5
       rect:
         serializedVersion: 2
         x: 80
@@ -242,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1979d61d861084d8ba10d601bee48f41
-      internalID: 1683343801
+      spriteID: 522fd5fa8b5683c468e614dba582ce1b
+      internalID: 1100446973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_6
+      name: elevator-new_6
       rect:
         serializedVersion: 2
         x: 96
@@ -263,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b53546e2e3e74cafa8441d2428bf201
-      internalID: 817643292
+      spriteID: aaa454ec8d4804f42aea189c8402dc54
+      internalID: 1333913368
       vertices: []
       indices: 
       edges: []
@@ -280,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      door_0: 1654682543
-      door_1: 1851649687
-      door_2: -1820489175
-      door_3: 10732892
-      door_4: -1765165957
-      door_5: 1683343801
-      door_6: 817643292
+      elevator-new_0: -1546563293
+      elevator-new_1: 1412382888
+      elevator-new_2: -92253720
+      elevator-new_3: -567162497
+      elevator-new_4: -2106762717
+      elevator-new_5: 1100446973
+      elevator-new_6: 1333913368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
