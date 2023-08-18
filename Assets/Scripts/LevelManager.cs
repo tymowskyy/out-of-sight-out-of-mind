@@ -6,7 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     private void Awake()
     {
-        if(instance != null)
+        if(GameObject.FindGameObjectsWithTag("LevelManager").Length > 1)
         {
             Destroy(gameObject);
         }

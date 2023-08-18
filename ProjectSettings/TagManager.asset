@@ -7,6 +7,8 @@ TagManager:
   - LightSource
   - Pickup
   - PlayerColliderOffset
+  - Music
+  - LevelManager
   layers:
   - Default
   - TransparentFX
@@ -47,7 +49,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: clickablelight
+  - name: LightTexture
     uniqueID: 1778978885
     locked: 0
   - name: Player
