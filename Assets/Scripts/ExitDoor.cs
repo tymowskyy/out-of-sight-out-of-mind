@@ -23,11 +23,19 @@ public class ExitDoor : MonoBehaviour
             shouldLoadNextLevel = true;
             animator.enabled = true;
 
-            player.GetComponent<Movement>().enabled = false;
+            Movement playerController = player.GetComponent<Movement>();
+            Animator playerAnimator = playerController.getAnimator();
+
+            playerController.enabled = false;
+
             player.GetComponent<PlayerPickupManager>().enabled = false;
             player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
             player.transform.position = doorCenter.position;
+
+            playerAnimator.SetFloat("velocityX", 0f);
+            playerAnimator.SetFloat("velocityY", 0f);
+            playerAnimator.ResetTrigger("onJump");
         }
     }
 

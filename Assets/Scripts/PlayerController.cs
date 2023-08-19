@@ -192,6 +192,11 @@ public class Movement : MonoBehaviour
         return isMovingX && groundedThisFrame && (!isPlayingAlready || !isLooped) && !isJumping;
     }
 
+    public Animator getAnimator()
+    {
+        return animator;
+    }
+
     //Variables
     private Rigidbody2D rb;
     private Animator animator;
