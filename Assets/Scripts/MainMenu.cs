@@ -30,4 +30,20 @@ public class MainMenu : MonoBehaviour
         MusicManager.instance.UpdateVolume(volume);
     }
 
+    public void OpenLevelSellector()
+    {
+        startingScreen.SetActive(false);
+        levelSellector.SetActive(true);
+    }
+
+    public void CloseLevelSellector()
+    {
+        startingScreen.SetActive(true);
+        levelSellector.SetActive(false);
+    }
+
+    public void SelectLevel(int level)
+    {
+        LevelManager.instance.LoadLevel(level);
+    }
 }

@@ -22,6 +22,13 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(levelSceneNames[currentLevel]);
     }
 
+    public void LoadLevel(int level)
+    {
+        currentLevel = level;
+        SceneManager.LoadScene(levelSceneNames[level]);
+    }
+
+
     public void LoadNextLevel()
     {
         if(currentLevel == levelSceneNames.Length - 1)
