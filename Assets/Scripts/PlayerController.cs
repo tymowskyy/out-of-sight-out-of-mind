@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private void Awake()
     {
@@ -175,9 +175,13 @@ public class Movement : MonoBehaviour
         animator.SetFloat("velocityY", rb.velocity.y);
     }
 
-    public IEnumerator die()
+    public IEnumerator die(float waitTime=0f)
     {
         this.enabled = false;
+        rb.velocity = Vector3.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+
+        yield return new WaitForSeconds(waitTime);
 
         playerSpriteObject.GetComponent<SpriteRenderer>().enabled = false;
 
