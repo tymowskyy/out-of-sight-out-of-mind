@@ -6,6 +6,11 @@ public class LevelManager : MonoBehaviour
 {
     private void Awake()
     {
+        if(GameObject.FindGameObjectsWithTag("LevelManager").Length > 1)
+        {
+            Destroy(gameObject);
+        }
+
         instance = this;
         currentLevel = 0;
 
@@ -21,6 +26,7 @@ public class LevelManager : MonoBehaviour
         }
 
         SceneManager.LoadScene(levelSceneNames[currentLevel+1]);
+        currentLevel++;
     }
 
     public void RestartLevel()
