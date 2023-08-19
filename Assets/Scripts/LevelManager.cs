@@ -17,11 +17,24 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void ContinueGame()
+    {
+        SceneManager.LoadScene(levelSceneNames[currentLevel]);
+    }
+
+    public void LoadLevel(int level)
+    {
+        currentLevel = level;
+        SceneManager.LoadScene(levelSceneNames[level]);
+    }
+
+
     public void LoadNextLevel()
     {
         if(currentLevel == levelSceneNames.Length - 1)
         {
-            //we've finished the last level
+            currentLevel = 0;
+            SceneManager.LoadScene(mainMenu);
             return;
         }
 
@@ -40,4 +53,5 @@ public class LevelManager : MonoBehaviour
     private int currentLevel;
 
     [SerializeField] private string[] levelSceneNames;
+    [SerializeField] private string mainMenu;
 }
