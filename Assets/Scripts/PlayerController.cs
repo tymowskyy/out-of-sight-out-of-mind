@@ -15,6 +15,18 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(PauseMenu.instance.isPaused)
+            {
+                PauseMenu.instance.ClosePauseMenu();
+            }
+            else
+            {
+                PauseMenu.instance.OpenPauseMenu();
+            }
+        }
+
         //Timers
         updateTimers();
         groundedThisFrame = isGrounded();
@@ -90,7 +102,7 @@ public class Movement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.R))
         {
-            LevelManager.instance.RestartLevel();
+            StartCoroutine(die());
         }
 
         handleAnimation();
@@ -100,7 +112,7 @@ public class Movement : MonoBehaviour
 
         if(transform.position.y < deathYLevel)
         {
-            LevelManager.instance.RestartLevel();
+            StartCoroutine(die());
         }
     }
 
@@ -161,6 +173,22 @@ public class Movement : MonoBehaviour
     {
         animator.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("velocityY", rb.velocity.y);
+    }
+
+    public IEnumerator die()
+    {
+        this.enabled = false;
+
+        playerSpriteObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        audioSource.clip = deathSound;
+        audioSource.loop = false;
+
+        audioSource.Play();
+
+        yield return new WaitWhile(() => audioSource.isPlaying);
+
+        LevelManager.instance.RestartLevel();
     }
 
     private bool canJump()
