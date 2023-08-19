@@ -44,6 +44,7 @@ public class MainMenu : MonoBehaviour
         if (!LevelManager.instance.isUnlocked(level))
         {
             levelButton.GetComponent<Button>().interactable = false;
+            levelButton.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
         }
     }
 
