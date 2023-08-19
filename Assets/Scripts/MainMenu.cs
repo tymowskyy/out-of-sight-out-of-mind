@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject startingScreen;
     [SerializeField] private GameObject settings;
-    [SerializeField] private GameObject levelSellector;
+    [SerializeField] private GameObject levelSelector;
 
     public void PlayGame()
     {
@@ -30,16 +30,16 @@ public class MainMenu : MonoBehaviour
         MusicManager.instance.UpdateVolume(volume);
     }
 
-    public void OpenLevelSellector()
+    public void OpenLevelSelector()
     {
         startingScreen.SetActive(false);
-        levelSellector.SetActive(true);
+        levelSelector.SetActive(true);
     }
 
-    public void CloseLevelSellector()
+    public void CloseLevelSelector()
     {
         startingScreen.SetActive(true);
-        levelSellector.SetActive(false);
+        levelSelector.SetActive(false);
     }
 
     public void SelectLevel(int level)
