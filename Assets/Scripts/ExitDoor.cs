@@ -23,7 +23,7 @@ public class ExitDoor : MonoBehaviour
             shouldLoadNextLevel = true;
             animator.enabled = true;
 
-            Movement playerController = player.GetComponent<Movement>();
+            PlayerController playerController = player.GetComponent<PlayerController>();
             Animator playerAnimator = playerController.getAnimator();
 
             playerController.enabled = false;

@@ -14,7 +14,7 @@ public class EntranceDoor : MonoBehaviour
 
     private void Start()
     {
-        player.GetComponent<Movement>().enabled = false;
+        player.GetComponent<PlayerController>().enabled = false;
 
         animator.enabled = true;
     }
@@ -23,7 +23,7 @@ public class EntranceDoor : MonoBehaviour
     {
         animator.enabled = false;
 
-        player.GetComponent<Movement>().enabled = true;
+        player.GetComponent<PlayerController>().enabled = true;
     }
 
     private Animator animator;
