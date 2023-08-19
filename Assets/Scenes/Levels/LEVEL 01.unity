@@ -1082,6 +1082,87 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
+--- !u!1001 &1506323156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2979390207942774136, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: tutorialText
+      value: You can press <b>R</b> to restart a level
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979390207942774136, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: displayOnlyOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.454
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.463025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114328923570378571, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_Name
+      value: LightTutorialTrigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423557502272480371, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_Size.x
+      value: 4.9711857
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423557502272480371, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_Size.y
+      value: 2.2472057
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423557502272480371, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5432415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423557502272480371, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6008985
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
 --- !u!1001 &1814475494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1937,6 +2018,7 @@ SceneRoots:
   - {fileID: 1094431363}
   - {fileID: 1814475494}
   - {fileID: 891250775}
+  - {fileID: 1506323156}
   - {fileID: 304330330}
   - {fileID: 6533801160495533379}
   - {fileID: 1921921268}
