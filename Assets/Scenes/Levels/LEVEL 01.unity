@@ -1140,7 +1140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7114328923570378571, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: m_Name
-      value: LightTutorialTrigger (1)
+      value: RestartTutorialTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 8423557502272480371, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: m_Size.x
