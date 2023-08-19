@@ -102,4 +102,9 @@ public class MainMenu : MonoBehaviour
     {
         LevelManager.instance.LoadLevel(level);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
