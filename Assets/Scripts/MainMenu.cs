@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using TMPro;
 
 public class MainMenu : MonoBehaviour
@@ -17,6 +18,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private int levelsPerRow;
     [SerializeField] private float levelButtonPadding;
     [SerializeField] private float levelStartingYLevel;
+
+    [Header("Audio")]
+    [SerializeField] private AudioMixer mixer;
+    const string MIXER_MUSIC = "MusicVolume";
+    const string MIXER_SFX = "SFXVolume";
+    const string MIXER_MASTER = "MasterVolume";
     
     private void Start()
     {
@@ -65,9 +72,18 @@ public class MainMenu : MonoBehaviour
         settings.SetActive(false);
     }
 
-    public void UpdateVolume(float volume)
+    public void UpdateMasterVolume(float volume)
     {
-        MusicManager.instance.UpdateVolume(volume);
+        mixer.SetFloat(MIXER_MASTER, Mathf.Log10(volume) * 20);
+    }
+    public void UpdateMusicVolume(float volume)
+    {
+        mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(volume) * 20);
+    }
+
+    public void UpdateSFXVolume(float volume)
+    {
+        mixer.SetFloat(MIXER_SFX, Mathf.Log10(volume) * 20);
     }
 
     public void OpenLevelSelector()
