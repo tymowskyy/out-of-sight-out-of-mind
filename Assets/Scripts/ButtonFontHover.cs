@@ -12,7 +12,8 @@ public class ButtonFontHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void Awake()
     {
-        GetComponentInChildren<TextMeshProUGUI>().color = colorDefault;
+        ResetColor();
+        GetComponent<Button>().onClick.AddListener(ResetColor);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -21,6 +22,11 @@ public class ButtonFontHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
     }
 
     public void OnPointerExit(PointerEventData eventData)
+    {
+        GetComponentInChildren<TextMeshProUGUI>().color = colorDefault;
+    }
+
+    private void ResetColor()
     {
         GetComponentInChildren<TextMeshProUGUI>().color = colorDefault;
     }
