@@ -13,23 +13,36 @@ public class CreditsAnim : MonoBehaviour
 
     private void Update()
     {
-
-        charTimer += Time.deltaTime;
-
-        if(charTimer >= charDelay)
+        if (!done)
         {
-            tmpro.text += text[iter];
-            charTimer = 0f;
-            iter++;
-        }
+            charTimer += Time.deltaTime;
 
-        if(iter >= text.Length)
+            if (charTimer >= charDelay)
+            {
+                tmpro.text += text[iter];
+                charTimer = 0f;
+                iter++;
+            }
+
+            if (iter >= text.Length)
+            {
+                done = true;
+            }
+        } else
         {
-            this.enabled = false;
+            afterAnimTimeout -= Time.deltaTime;
+
+            if(afterAnimTimeout <= 0f)
+            {
+                LevelManager.instance.LoadMainMenu();
+            }
         }
     }
 
+    private bool done = false;
+
     private float charTimer;
+    private float afterAnimTimeout = 7.34f;
 
     [SerializeField] private float charDelay;
 
