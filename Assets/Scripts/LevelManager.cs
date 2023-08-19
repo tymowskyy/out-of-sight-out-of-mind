@@ -13,6 +13,14 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
+            if(PlayerPrefs.HasKey("lastLevelUnlocked"))
+                lastLevelUnlocked = PlayerPrefs.GetInt("lastLevelUnlocked");
+            else
+            {
+                PlayerPrefs.SetInt("lastLevelUnlocked", 0);
+                PlayerPrefs.Save();
+            }
+
             instance = this;
             currentLevel = 0;
 
@@ -48,7 +56,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(levelSceneNames[currentLevel+1]);
         currentLevel++;
         if (currentLevel > lastLevelUnlocked)
+        {
             lastLevelUnlocked = currentLevel;
+            PlayerPrefs.SetInt("lastLevelUnlocked", lastLevelUnlocked);
+            PlayerPrefs.Save();
+        }
     }
 
     public void RestartLevel()
