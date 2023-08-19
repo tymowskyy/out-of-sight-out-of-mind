@@ -44,7 +44,7 @@ public class BrokenLightSwitch : MonoBehaviour
 
             if(currentRepetition > cycles[currentCycle].repetitions*2)
             {
-                currentRepetition = 0;
+                currentRepetition = 1;
                 currentCycle++;
 
                 if(currentCycle >= cycles.Length)
