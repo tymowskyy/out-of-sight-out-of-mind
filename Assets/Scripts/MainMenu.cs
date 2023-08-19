@@ -41,6 +41,10 @@ public class MainMenu : MonoBehaviour
             );
         levelButton.GetComponent<Button>().onClick.AddListener(() => SelectLevel(level));
         levelButton.GetComponentInChildren<TextMeshProUGUI>().text = (level + 1).ToString();
+        if (!LevelManager.instance.isUnlocked(level))
+        {
+            levelButton.GetComponent<Button>().interactable = false;
+        }
     }
 
     public void PlayGame()

@@ -47,6 +47,8 @@ public class LevelManager : MonoBehaviour
 
         SceneManager.LoadScene(levelSceneNames[currentLevel+1]);
         currentLevel++;
+        if (currentLevel > lastLevelUnlocked)
+            lastLevelUnlocked = currentLevel;
     }
 
     public void RestartLevel()
@@ -60,10 +62,17 @@ public class LevelManager : MonoBehaviour
         return levelSceneNames.Length;
     }
 
+    public bool isUnlocked(int level)
+    {
+        return debugMode || level <= lastLevelUnlocked;
+    }
+
     public static LevelManager instance { get; private set; }
 
     private int currentLevel;
+    private int lastLevelUnlocked;
 
     [SerializeField] private string[] levelSceneNames;
     [SerializeField] private string mainMenu;
+    [SerializeField] private bool debugMode;
 }
