@@ -15,6 +15,18 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(PauseMenu.instance.isPaused)
+            {
+                PauseMenu.instance.ClosePauseMenu();
+            }
+            else
+            {
+                PauseMenu.instance.OpenPauseMenu();
+            }
+        }
+
         //Timers
         updateTimers();
         groundedThisFrame = isGrounded();

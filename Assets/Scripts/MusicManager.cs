@@ -11,11 +11,15 @@ public class MusicManager : MonoBehaviour
     {
         if(GameObject.FindGameObjectsWithTag("Music").Length > 1)
         {
-            Destroy(gameObject);
+            if(instance != this)
+                Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
-        instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void UpdateVolume(System.Single volume)
