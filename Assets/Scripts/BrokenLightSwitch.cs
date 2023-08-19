@@ -9,7 +9,8 @@ public class BrokenLightSwitch : MonoBehaviour
     public class Cycle
     {
         public int repetitions;
-        public float repDuration;
+        public float onDuration;
+        public float offDuration;
     }
 
     [SerializeField] private Cycle[] cycles;
@@ -28,7 +29,7 @@ public class BrokenLightSwitch : MonoBehaviour
             return;
         }
 
-        toggleTimer = cycles[0].repDuration;
+        toggleTimer = cycles[0].onDuration;
         currentCycle = 0;
         currentRepetition = 1;
     }
@@ -41,7 +42,7 @@ public class BrokenLightSwitch : MonoBehaviour
         {
             currentRepetition++;
 
-            if(currentRepetition > cycles[currentCycle].repetitions)
+            if(currentRepetition > cycles[currentCycle].repetitions*2)
             {
                 currentRepetition = 0;
                 currentCycle++;
@@ -52,7 +53,10 @@ public class BrokenLightSwitch : MonoBehaviour
                 }
             }
 
-            toggleTimer = cycles[currentCycle].repDuration;
+            if(currentRepetition%2 == 0)
+                toggleTimer = cycles[currentCycle].onDuration;
+            else
+                toggleTimer = cycles[currentCycle].offDuration;
 
             foreach(LightSource lightSource in lightSources)
             {

@@ -2201,7 +2201,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cycles:
   - repetitions: 1
-    repDuration: 1
+    onDuration: 0.7
+    offDuration: 0.8
   lightSources:
   - {fileID: 1698216676}
 --- !u!114 &1698216676 stripped
