@@ -28,6 +28,10 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(levelSceneNames[level]);
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(mainMenu);
+    }
 
     public void LoadNextLevel()
     {

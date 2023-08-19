@@ -27,4 +27,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
     }
+
+    public void ExitToMainMenu()
+    {
+        Time.timeScale = 1f;
+        LevelManager.instance.LoadMainMenu();
+    }
 }
