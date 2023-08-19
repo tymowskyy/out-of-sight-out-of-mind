@@ -8,13 +8,16 @@ public class LevelManager : MonoBehaviour
     {
         if(GameObject.FindGameObjectsWithTag("LevelManager").Length > 1)
         {
-            Destroy(gameObject);
+            if(instance != this)
+                Destroy(gameObject);
         }
+        else
+        {
+            instance = this;
+            currentLevel = 0;
 
-        instance = this;
-        currentLevel = 0;
-
-        DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void ContinueGame()
