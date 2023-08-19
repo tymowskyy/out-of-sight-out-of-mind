@@ -43,7 +43,7 @@ public class MainMenu : MonoBehaviour
     {
         levelButton.GetComponent<RectTransform>().anchoredPosition =
             new Vector2(
-                level%levelsPerRow * levelButtonPadding - levelsPerRow * levelButtonPadding / 2,
+                level%levelsPerRow * levelButtonPadding - (levelsPerRow-1) * levelButtonPadding / 2,
                 levelStartingYLevel - Mathf.Floor(level / levelsPerRow) * levelButtonPadding
             );
         levelButton.GetComponent<Button>().onClick.AddListener(() => SelectLevel(level));
