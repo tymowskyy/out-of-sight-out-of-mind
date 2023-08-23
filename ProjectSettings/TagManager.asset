@@ -49,14 +49,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Rail
+    uniqueID: 3083342005
+    locked: 0
   - name: LightTexture
     uniqueID: 1778978885
     locked: 0
   - name: Player
     uniqueID: 2621938865
-    locked: 0
-  - name: Rail
-    uniqueID: 3083342005
     locked: 0
   - name: Pickup
     uniqueID: 211740675

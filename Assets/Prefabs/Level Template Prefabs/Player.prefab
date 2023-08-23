@@ -110,7 +110,7 @@ MonoBehaviour:
   playerSpriteObject: {fileID: 5850973607473672994}
   deathYLevel: -10
   maxRunSpeed: 6
-  accelerationRate: 8
+  accelerationRate: 9
   deccelerationRate: 10
   jumpStrength: 9
   coyoteTime: 0.15
@@ -126,9 +126,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  jumpSound: {fileID: 8300000, guid: b2082474aedcee64f9a2f35619b674f7, type: 3}
-  walkSound: {fileID: 8300000, guid: 06da3774d79fac04fbc17a2ae56663f1, type: 3}
-  deathSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: b8e6170ec2a4fab48a801f09a767b1e3, type: 3}
+  walkSound: {fileID: 8300000, guid: bb672233f2139ee4db349d2edc323230, type: 3}
+  deathSound: {fileID: 8300000, guid: 12f3c006980365749b0a4a71b785ac6f, type: 3}
 --- !u!50 &1824856207196128600
 Rigidbody2D:
   serializedVersion: 4
@@ -242,6 +242,7 @@ MonoBehaviour:
   - {fileID: 5285867136257067339}
   - {fileID: 4502466275028475530}
   colliderSegmentCount: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  playerController: {fileID: 0}
 --- !u!82 &3797227831319332859
 AudioSource:
   m_ObjectHideFlags: 0
@@ -251,9 +252,9 @@ AudioSource:
   m_GameObject: {fileID: 4969506112087716075}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3253796052437833160, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -410,7 +411,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1673028431
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1097684130, guid: fa800b9e30824f54e8aa43f620084f4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

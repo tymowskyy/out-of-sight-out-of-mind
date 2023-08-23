@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private void Awake()
     {
@@ -15,6 +15,18 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(PauseMenu.instance.isPaused)
+            {
+                PauseMenu.instance.ClosePauseMenu();
+            }
+            else
+            {
+                PauseMenu.instance.OpenPauseMenu();
+            }
+        }
+
         //Timers
         updateTimers();
         groundedThisFrame = isGrounded();
@@ -90,7 +102,7 @@ public class Movement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.R))
         {
-            LevelManager.instance.RestartLevel();
+            StartCoroutine(die());
         }
 
         handleAnimation();
@@ -100,7 +112,7 @@ public class Movement : MonoBehaviour
 
         if(transform.position.y < deathYLevel)
         {
-            LevelManager.instance.RestartLevel();
+            StartCoroutine(die());
         }
     }
 
@@ -163,6 +175,26 @@ public class Movement : MonoBehaviour
         animator.SetFloat("velocityY", rb.velocity.y);
     }
 
+    public IEnumerator die(float waitTime=0f)
+    {
+        this.enabled = false;
+        rb.velocity = Vector3.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+
+        yield return new WaitForSeconds(waitTime);
+
+        playerSpriteObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        audioSource.clip = deathSound;
+        audioSource.loop = false;
+
+        audioSource.Play();
+
+        yield return new WaitWhile(() => audioSource.isPlaying);
+
+        LevelManager.instance.RestartLevel();
+    }
+
     private bool canJump()
     {
         return jumpTimer > 0f && !isJumping;
@@ -190,6 +222,11 @@ public class Movement : MonoBehaviour
         bool isMovingX = Mathf.Abs(rb.velocity.x) > 0f;
 
         return isMovingX && groundedThisFrame && (!isPlayingAlready || !isLooped) && !isJumping;
+    }
+
+    public Animator getAnimator()
+    {
+        return animator;
     }
 
     //Variables

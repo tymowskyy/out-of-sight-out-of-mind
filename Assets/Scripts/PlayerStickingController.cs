@@ -6,10 +6,14 @@ public class PlayerStickingController : MonoBehaviour
 {
     public PlayerColliderOffset[] colliderOffsets;
     public List<int> colliderSegmentCount = new List<int>();
+
+    [SerializeField] private PlayerController playerController;
     private bool isStuck = false;
 
     void Awake()
     {
+        playerController = GetComponent<PlayerController>();
+
         colliderSegmentCount = new List<int>(colliderOffsets.Length);
         for (int i=0; i<colliderOffsets.Length; ++i)
         {
@@ -36,8 +40,8 @@ public class PlayerStickingController : MonoBehaviour
                 return;
             }
         }
-        Debug.Break();
-        //LevelManager.instance.RestartLevel();
+
+        StartCoroutine(playerController.die(1f));
     }
 
     public void OnPlayerStick()
