@@ -2557,6 +2557,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circular Light
       objectReference: {fileID: 0}
+    - target: {fileID: 1996816607135211755, guid: 65400793d38934859acb99e2a33a1625, type: 3}
+      propertyPath: m_Radius
+      value: 3.6201909
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996816607135211755, guid: 65400793d38934859acb99e2a33a1625, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.030662298
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996816607135211755, guid: 65400793d38934859acb99e2a33a1625, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.007666111
+      objectReference: {fileID: 0}
     - target: {fileID: 6826925903175028866, guid: 65400793d38934859acb99e2a33a1625, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
