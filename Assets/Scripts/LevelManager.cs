@@ -44,12 +44,16 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(mainMenu);
     }
 
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene(credits);
+    }
+
     public void LoadNextLevel()
     {
         if(currentLevel == levelSceneNames.Length - 1)
         {
-            currentLevel = 0;
-            SceneManager.LoadScene(mainMenu);
+            SceneManager.LoadScene(credits);
             return;
         }
 
@@ -86,5 +90,6 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private string[] levelSceneNames;
     [SerializeField] private string mainMenu;
+    [SerializeField] private string credits;
     [SerializeField] private bool debugMode;
 }
