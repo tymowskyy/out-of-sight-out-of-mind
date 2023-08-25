@@ -7,7 +7,11 @@ public class SegmentBehavior : MonoBehaviour
     private PlayerStickingController stickingController;
     private void Awake()
     {
-        stickingController = GameObject.FindWithTag("Player").GetComponent<PlayerStickingController>();
+        GameObject player = GameObject.FindWithTag("Player");
+        GameObject playerFeet = GameObject.FindWithTag("PlayerFeet");
+
+        stickingController = player.GetComponent<PlayerStickingController>();
+        playerFeetCO = playerFeet.GetComponent<PlayerColliderOffset>();
 
         for (int i=0; i<stickingController.colliderOffsets.Length; ++i)
             isCollidingWithPlayerOffset.Add(false);
@@ -18,6 +22,7 @@ public class SegmentBehavior : MonoBehaviour
 
         segmentCollider.isTrigger = true;
         collidingWithPlayer = false;
+        collidingWithPlayerFeet = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,9 +60,10 @@ public class SegmentBehavior : MonoBehaviour
                 stickingController.colliderSegmentCount[colliderIndex]++;
         }
 
-        else if (collision.CompareTag("PlayerFeet"))
+        else if (collision.CompareTag("PlayerFeet") && !segmentCollider.isTrigger)
         {
-            collision.gameObject.GetComponent<PlayerColliderOffset>().index++;
+            collidingWithPlayerFeet = true;
+            playerFeetCO.index++;
         }
     }
 
@@ -81,7 +87,13 @@ public class SegmentBehavior : MonoBehaviour
                     {
                         stickingController.colliderSegmentCount[i]--;
                     }
-                }      
+                }
+                
+                if(collidingWithPlayerFeet)
+                {
+                    playerFeetCO.index--;
+                    collidingWithPlayerFeet = false;
+                }
             }
         }
         else if (collision.CompareTag("PlayerColliderOffset"))
@@ -94,11 +106,18 @@ public class SegmentBehavior : MonoBehaviour
 
         else if(collision.CompareTag("PlayerFeet"))
         {
-            collision.gameObject.GetComponent<PlayerColliderOffset>().index--;
+            if (collidingWithPlayerFeet)
+            {
+                collidingWithPlayerFeet = false;
+                playerFeetCO.index--;
+            }
         }
     }
 
-    bool collidingWithPlayer;
+    private PlayerColliderOffset playerFeetCO;
+
+    private bool collidingWithPlayer;
+    private bool collidingWithPlayerFeet;
 
     private int lightSourceCount; //in how mant light sources are we
     private Collider2D segmentCollider;
