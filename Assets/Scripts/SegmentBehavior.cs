@@ -60,7 +60,7 @@ public class SegmentBehavior : MonoBehaviour
                 stickingController.colliderSegmentCount[colliderIndex]++;
         }
 
-        else if (collision.CompareTag("PlayerFeet") && !segmentCollider.isTrigger)
+        if (collision.CompareTag("PlayerFeet") && !segmentCollider.isTrigger)
         {
             collidingWithPlayerFeet = true;
             playerFeetCO.index++;
