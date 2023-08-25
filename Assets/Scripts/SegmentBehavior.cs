@@ -54,6 +54,11 @@ public class SegmentBehavior : MonoBehaviour
             if (!segmentCollider.isTrigger)
                 stickingController.colliderSegmentCount[colliderIndex]++;
         }
+
+        else if (collision.CompareTag("PlayerFeet"))
+        {
+            collision.gameObject.GetComponent<PlayerColliderOffset>().index++;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -85,6 +90,11 @@ public class SegmentBehavior : MonoBehaviour
             isCollidingWithPlayerOffset[colliderIndex] = false; 
             if (!segmentCollider.isTrigger)
                 stickingController.colliderSegmentCount[colliderIndex]--;
+        }
+
+        else if(collision.CompareTag("PlayerFeet"))
+        {
+            collision.gameObject.GetComponent<PlayerColliderOffset>().index--;
         }
     }
 

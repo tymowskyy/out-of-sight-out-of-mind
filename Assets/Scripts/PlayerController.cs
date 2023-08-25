@@ -202,17 +202,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded()
     {
-        Collider2D[] results = Physics2D.OverlapBoxAll(groundCheckPos.position, groundCheckSize, 0f, groundLayer);
-
-        foreach(Collider2D hitCollider in results)
-        {
-            if(!hitCollider.isTrigger)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        return feetColliderOffset.index > 0;
     }
 
     private bool shouldPlayRunSound()
@@ -276,9 +266,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpGravityScale;
 
     [Header("Checks")]
-    [SerializeField] private Transform groundCheckPos;
-    [SerializeField] private Vector2 groundCheckSize;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private PlayerColliderOffset feetColliderOffset;
 
     [Header("SoundEffects")]
     [SerializeField] private AudioClip jumpSound;

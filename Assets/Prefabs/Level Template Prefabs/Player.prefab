@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3891161968883356140}
-  m_Layer: 0
+  - component: {fileID: 2928951196400929523}
+  - component: {fileID: 6254061733526647404}
+  m_Layer: 10
   m_Name: stopki :3
-  m_TagString: Untagged
+  m_TagString: PlayerFeet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +33,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3210372933494477998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2928951196400929523
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408592626639416254}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.11}
+  serializedVersion: 2
+  m_Radius: 0.2131148
+--- !u!114 &6254061733526647404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408592626639416254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f61d94202ce4c8b833b9da94a16413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &4969506112087716075
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,11 +171,7 @@ MonoBehaviour:
   peakGravityScale: 1.8
   fallingGravityScale: 2.5
   jumpGravityScale: 2
-  groundCheckPos: {fileID: 3891161968883356140}
-  groundCheckSize: {x: 0.1, y: 0.1}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
+  feetColliderOffset: {fileID: 6254061733526647404}
   jumpSound: {fileID: 8300000, guid: b8e6170ec2a4fab48a801f09a767b1e3, type: 3}
   walkSound: {fileID: 8300000, guid: bb672233f2139ee4db349d2edc323230, type: 3}
   deathSound: {fileID: 8300000, guid: 12f3c006980365749b0a4a71b785ac6f, type: 3}
