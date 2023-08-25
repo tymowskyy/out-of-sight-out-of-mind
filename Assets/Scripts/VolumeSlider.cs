@@ -1,27 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(UnityEngine.UI.Slider))]
 public class VolumeSlider : MonoBehaviour
 {
-    [SerializeField] private AudioMixer mixer;
-    [SerializeField] string mixer_group;
+    [SerializeField] string mixerGroup;
     private UnityEngine.UI.Slider slider;
+    private MusicManager musicManager;
 
     public void Awake()
     {
+        musicManager = MusicManager.instance;
         slider = GetComponent<UnityEngine.UI.Slider>();
-        float volume;
-        mixer.GetFloat(mixer_group, out volume);
-        slider.value = Mathf.Pow(10, volume / 20);
+        slider.value = musicManager.GetVolume(mixerGroup);
         slider.onValueChanged.AddListener(UpdateVolume);
     }
 
     public void UpdateVolume(float volume)
     {
-        mixer.SetFloat(mixer_group, Mathf.Log10(volume) * 20);
+        musicManager.UpdateVolume(mixerGroup, volume);
     }
 }

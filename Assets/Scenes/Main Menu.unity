@@ -226,8 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
-  mixer_group: MasterVolume
+  mixerGroup: MasterVolume
 --- !u!1 &75112057
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,8 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
-  mixer_group: MusicVolume
+  mixerGroup: MusicVolume
 --- !u!1 &470251923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,8 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
-  mixer_group: SFXVolume
+  mixerGroup: SFXVolume
 --- !u!1 &1228125093
 GameObject:
   m_ObjectHideFlags: 0
@@ -4205,6 +4202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c41eaa977d164f4a9089c9129747c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
+  mixerGroups:
+  - MasterVolume
+  - MusicVolume
+  - SFXVolume
 --- !u!82 &2142158256
 AudioSource:
   m_ObjectHideFlags: 0
