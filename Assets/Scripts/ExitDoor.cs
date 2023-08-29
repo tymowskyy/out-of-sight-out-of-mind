@@ -7,6 +7,8 @@ public class ExitDoor : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -19,7 +21,10 @@ public class ExitDoor : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
+
         if(collision.CompareTag("Player")) {
+            spriteRenderer.sortingLayerName = "Door";
+
             shouldLoadNextLevel = true;
             animator.enabled = true;
 
@@ -42,6 +47,8 @@ public class ExitDoor : MonoBehaviour
     private bool shouldLoadNextLevel;
 
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
     private GameObject player;
 
     [SerializeField] private Transform doorCenter;
