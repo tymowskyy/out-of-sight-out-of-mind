@@ -34,10 +34,15 @@ public class LightSource : MonoBehaviour
 
     private void setSprite()
     {
+        if(lightBulbTexture == null)
+        {
+            return;
+        }
         if(on)
         {
             lightBulbTexture.sprite = onSprite;
-        } else
+        }
+        else
         {
             lightBulbTexture.sprite = offSprite;
         }
