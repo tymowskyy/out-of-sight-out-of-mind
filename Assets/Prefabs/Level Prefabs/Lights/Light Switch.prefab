@@ -82,8 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightSources: []
-  onTexture: {fileID: 233763022, guid: b59ec1823c4465843a1a63a4615052b7, type: 3}
-  offTexture: {fileID: 1119654919, guid: b59ec1823c4465843a1a63a4615052b7, type: 3}
+  onTexture: {fileID: 1170608263, guid: f9ffd988597a7294884f39114f709867, type: 3}
+  offTexture: {fileID: 1748150995, guid: f9ffd988597a7294884f39114f709867, type: 3}
 --- !u!82 &2982043550789935131
 AudioSource:
   m_ObjectHideFlags: 0
