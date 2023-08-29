@@ -9,7 +9,12 @@ public class Rail : MonoBehaviour
     public GameObject head;
     private bool isDragging = false;
 
-    void Update()
+    private void Start()
+    {
+        head.transform.position = PointToSegmentProjecion(head.transform.position, railStart.position, railEnd.position);
+    }
+
+    private void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetButtonDown("Fire1"))
