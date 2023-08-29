@@ -45,10 +45,14 @@ public class SegmentBehavior : MonoBehaviour
                         stickingController.colliderSegmentCount[i]++;
                     }
                 }
-            }
-            if(collidingWithPlayer)
-            {
-                stickingController.OnPlayerStick();
+                if(collidingWithPlayer)
+                {
+                    stickingController.OnPlayerStick();
+                }
+                if(collidingWithPlayerFeet)
+                {
+                    playerFeetCO.index++;
+                }
             }
         }
 
@@ -60,10 +64,11 @@ public class SegmentBehavior : MonoBehaviour
                 stickingController.colliderSegmentCount[colliderIndex]++;
         }
 
-        if (collision.CompareTag("PlayerFeet") && !segmentCollider.isTrigger)
+        if (collision.CompareTag("PlayerFeet"))
         {
             collidingWithPlayerFeet = true;
-            playerFeetCO.index++;
+            if(!segmentCollider.isTrigger)
+                playerFeetCO.index++;
         }
     }
 
@@ -92,7 +97,6 @@ public class SegmentBehavior : MonoBehaviour
                 if(collidingWithPlayerFeet)
                 {
                     playerFeetCO.index--;
-                    collidingWithPlayerFeet = false;
                 }
             }
         }
@@ -106,9 +110,9 @@ public class SegmentBehavior : MonoBehaviour
 
         else if(collision.CompareTag("PlayerFeet"))
         {
-            if (collidingWithPlayerFeet)
+            collidingWithPlayerFeet = false;
+            if (!segmentCollider.isTrigger)
             {
-                collidingWithPlayerFeet = false;
                 playerFeetCO.index--;
             }
         }
