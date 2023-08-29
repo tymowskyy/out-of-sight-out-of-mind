@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7005140}
   - component: {fileID: 7005141}
+  - component: {fileID: 7005142}
   m_Layer: 5
   m_Name: Volume Slider
   m_TagString: Untagged
@@ -212,19 +213,20 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1097835746}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: UpdateMasterVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &7005142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7005139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: MasterVolume
 --- !u!1 &75112057
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404596867}
   - component: {fileID: 404596868}
+  - component: {fileID: 404596869}
   m_Layer: 5
   m_Name: Volume Slider (1)
   m_TagString: Untagged
@@ -827,19 +830,20 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1097835746}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: UpdateMusicVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &404596869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404596866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: MusicVolume
 --- !u!1 &470251923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,7 +1535,6 @@ MonoBehaviour:
   levelsPerRow: 5
   levelButtonPadding: 80
   levelStartingYLevel: 60
-  mixer: {fileID: 24100000, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
 --- !u!1 &1104098636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201024358}
   - component: {fileID: 1201024359}
+  - component: {fileID: 1201024360}
   m_Layer: 5
   m_Name: Volume Slider (2)
   m_TagString: Untagged
@@ -1873,19 +1877,20 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1097835746}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: UpdateSFXVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1201024360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201024357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: SFXVolume
 --- !u!1 &1228125093
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,6 +4485,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c41eaa977d164f4a9089c9129747c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
+  mixerGroups:
+  - MasterVolume
+  - MusicVolume
+  - SFXVolume
 --- !u!82 &2142158256
 AudioSource:
   m_ObjectHideFlags: 0

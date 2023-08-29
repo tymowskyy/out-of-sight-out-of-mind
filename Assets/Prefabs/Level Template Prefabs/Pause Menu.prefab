@@ -553,6 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283531508633699130}
   - component: {fileID: 6168273116051701628}
+  - component: {fileID: 5117692676086478149}
   m_Layer: 5
   m_Name: Volume Slider (2)
   m_TagString: Untagged
@@ -632,19 +633,20 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5116915982552628646}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: UpdateSFXVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &5117692676086478149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049395644499500100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: SFXVolume
 --- !u!1 &2890775612140764016
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2486496948047311049}
   - component: {fileID: 3729839824349636716}
+  - component: {fileID: 5856694716913169770}
   m_Layer: 5
   m_Name: Volume Slider
   m_TagString: Untagged
@@ -920,19 +923,20 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5116915982552628646}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: UpdateMasterVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &5856694716913169770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217978160500798376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: MasterVolume
 --- !u!1 &3591433815416323560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519786793916353924}
   - component: {fileID: 5236224188088772847}
+  - component: {fileID: 284707920434529069}
   m_Layer: 5
   m_Name: Volume Slider (1)
   m_TagString: Untagged
@@ -1231,19 +1236,20 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5116915982552628646}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: UpdateMusicVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &284707920434529069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386709114937535566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5decfcf13f8744ca7b475e47aa953f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: MusicVolume
 --- !u!1 &4516751202646469702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,7 +2290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 4516751202646469702}
-  mixer: {fileID: 24100000, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
 --- !u!1 &8511476653757740769
 GameObject:
   m_ObjectHideFlags: 0
