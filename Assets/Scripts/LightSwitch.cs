@@ -9,11 +9,6 @@ public class LightSwitch : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         collider2d = GetComponent<Collider2D>();
-
-        foreach(LightSource lightSource in lightSources)
-        {
-            setLightBulbTexture(lightSource);
-        }
     }
 
     private void Update()
@@ -33,20 +28,6 @@ public class LightSwitch : MonoBehaviour
         foreach(LightSource lightSource in lightSources)
         {
             lightSource.toggle();
-
-            setLightBulbTexture(lightSource);
-        }
-    }
-
-    private void setLightBulbTexture(LightSource lightSource)
-    {
-        if (lightSource.isOn())
-        {
-            lightSource.lightBulbTexture.sprite = onTexture;
-        }
-        else
-        {
-            lightSource.lightBulbTexture.sprite = offTexture;
         }
     }
 
@@ -54,6 +35,4 @@ public class LightSwitch : MonoBehaviour
     private Collider2D collider2d;
 
     [SerializeField] private LightSource[] lightSources;
-    [SerializeField] private Sprite onTexture;
-    [SerializeField] private Sprite offTexture;
 }

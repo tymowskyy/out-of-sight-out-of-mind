@@ -974,6 +974,14 @@ PrefabInstance:
       propertyPath: m_ShapePath.Array.data[3].y
       value: -0.24704218
       objectReference: {fileID: 0}
+    - target: {fileID: 4960089168937403189, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
+      propertyPath: onSprite
+      value: 
+      objectReference: {fileID: 233763022, guid: b59ec1823c4465843a1a63a4615052b7, type: 3}
+    - target: {fileID: 4960089168937403189, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
+      propertyPath: offSprite
+      value: 
+      objectReference: {fileID: 1119654919, guid: b59ec1823c4465843a1a63a4615052b7, type: 3}
     - target: {fileID: 5992603202479533587, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 4

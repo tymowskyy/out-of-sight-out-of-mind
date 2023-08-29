@@ -163,6 +163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightBulbTexture: {fileID: 5785091721143603721}
   defaultOn: 1
+  onSprite: {fileID: 21300000, guid: 5ad1e43852eaf68499694375efa9ab0f, type: 3}
+  offSprite: {fileID: 21300000, guid: 45bb5738ccb7bae418b40a7239be1a8b, type: 3}
 --- !u!50 &1822557949535961717
 Rigidbody2D:
   serializedVersion: 4
@@ -261,7 +263,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1778978885
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5ad1e43852eaf68499694375efa9ab0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

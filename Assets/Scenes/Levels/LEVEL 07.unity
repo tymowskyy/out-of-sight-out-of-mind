@@ -274,9 +274,17 @@ PrefabInstance:
       value: 2.6951
       objectReference: {fileID: 0}
     - target: {fileID: 4960089168937403189, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
+      propertyPath: onSprite
+      value: 
+      objectReference: {fileID: 1170608263, guid: f9ffd988597a7294884f39114f709867, type: 3}
+    - target: {fileID: 4960089168937403189, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
       propertyPath: defaultOn
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4960089168937403189, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
+      propertyPath: offSprite
+      value: 
+      objectReference: {fileID: 1748150995, guid: f9ffd988597a7294884f39114f709867, type: 3}
     - target: {fileID: 7349268729833999565, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.395
