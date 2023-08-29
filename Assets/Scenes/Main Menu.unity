@@ -610,11 +610,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1990321745084766073, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1990321745084766073, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287836424953816106, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: mixerGroup
@@ -626,15 +626,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9142922548286626715, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_Pivot.x
@@ -1043,11 +1043,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1990321745084766073, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1990321745084766073, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287836424953816106, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: mixerGroup
@@ -1059,15 +1059,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9142922548286626715, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_Pivot.x
@@ -1591,7 +1591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1228125094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3324,11 +3324,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1990321745084766073, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1990321745084766073, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287836424953816106, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: mixerGroup
@@ -3340,15 +3340,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9110163840657029245, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9142922548286626715, guid: d418e0ff0ed524f8989b967fc2b5956c, type: 3}
       propertyPath: m_Pivot.x
@@ -3450,7 +3450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1811626986
 RectTransform:
   m_ObjectHideFlags: 0
