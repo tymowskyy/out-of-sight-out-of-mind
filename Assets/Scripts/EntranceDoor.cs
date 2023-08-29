@@ -17,15 +17,15 @@ public class EntranceDoor : MonoBehaviour
     private void Start()
     {
         player.GetComponent<PlayerController>().enabled = false;
-
+        player.GetComponent<Rigidbody2D>().gravityScale = 0f;
         animator.enabled = true;
     }
 
     public void onOpenAnimationEnd()
     {
-        animator.enabled = false;
-
         player.GetComponent<PlayerController>().enabled = true;
+        player.GetComponent<Rigidbody2D>().gravityScale = 1f;
+        animator.enabled = false;
 
         //set sorting layer to the default one
         spriteRenderer.sortingLayerName ="Default";
