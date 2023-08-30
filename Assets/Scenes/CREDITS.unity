@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charDelay: 0.07
-  afterAnimTimeout: 5.2
+  afterAnimTimeout: 6.12
 --- !u!1 &240005574
 GameObject:
   m_ObjectHideFlags: 0
