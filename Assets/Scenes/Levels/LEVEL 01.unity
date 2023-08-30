@@ -1134,7 +1134,7 @@ PrefabInstance:
     - target: {fileID: 8963808237223570877, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 233763022, guid: b59ec1823c4465843a1a63a4615052b7, type: 3}
+      objectReference: {fileID: 1170608263, guid: f9ffd988597a7294884f39114f709867, type: 3}
     - target: {fileID: 9020294317182177718, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
       propertyPath: m_Name
       value: Triangular Light
