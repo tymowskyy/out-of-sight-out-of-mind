@@ -675,11 +675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8423557502272480371, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: m_Size.x
-      value: 3.358552
+      value: 3.0460901
       objectReference: {fileID: 0}
     - target: {fileID: 8423557502272480371, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: m_Offset.x
-      value: -1.179276
+      value: -1.0230451
       objectReference: {fileID: 0}
     - target: {fileID: 8423557502272480371, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: m_Offset.y
@@ -1016,20 +1016,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2815859930331055877, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815859930331055877, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.64190006
+      value: 0.63690007
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: -3.881
+      value: -3.8243
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 3.2739
+      value: 3.2703
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 3.5408
+      value: 3.6024
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
       propertyPath: m_ShapePath.Array.data[0].x
@@ -1046,6 +1050,14 @@ PrefabInstance:
     - target: {fileID: 2815859930331055877, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
       propertyPath: m_ShapePath.Array.data[1].y
       value: -7.2145467
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960089168937403189, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
+      propertyPath: defaultOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5992603202479533587, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5992603202479533587, guid: 044d6ec799ccc4f87bfbf01622150029, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x

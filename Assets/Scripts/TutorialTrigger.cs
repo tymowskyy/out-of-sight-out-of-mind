@@ -7,6 +7,8 @@ public class TutorialTrigger : MonoBehaviour
     private void Awake()
     {
         wasViewed = false;
+
+        tutorialNotificationSound = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -15,6 +17,8 @@ public class TutorialTrigger : MonoBehaviour
         {
             HUD.instance.setTutorialText(tutorialText);
             HUD.instance.setTutorialTextEnabled(true);
+
+            tutorialNotificationSound.Play();
 
             wasViewed = true;
         }
@@ -27,6 +31,8 @@ public class TutorialTrigger : MonoBehaviour
             HUD.instance.setTutorialTextEnabled(false);
         }
     }
+
+    private AudioSource tutorialNotificationSound;
 
     private bool wasViewed;
 
