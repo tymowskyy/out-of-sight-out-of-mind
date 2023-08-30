@@ -53,6 +53,11 @@ public class MainMenu : MonoBehaviour
         LevelManager.instance.ContinueGame();
     }
 
+    public void LoadCredits()
+    {
+        LevelManager.instance.LoadCredits();
+    }
+
     public void OpenSettings()
     {
         startingScreen.SetActive(false);
