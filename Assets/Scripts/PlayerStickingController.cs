@@ -22,7 +22,7 @@ public class PlayerStickingController : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isStuck) {
             UnstickPlayer();
@@ -47,5 +47,6 @@ public class PlayerStickingController : MonoBehaviour
     public void OnPlayerStick()
     {
         isStuck = true;
+        playerController.isStuck = isStuck;
     }
 }

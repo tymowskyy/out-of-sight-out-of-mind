@@ -29,13 +29,6 @@ public class PlayerController : MonoBehaviour
 
         //Timers
         updateTimers();
-        groundedThisFrame = isGrounded();
-
-        if(groundedThisFrame && rb.velocity.y <= 0f)
-        {
-            isJumping = false;
-            jumpTimer = coyoteTime;
-        }
 
         //Input
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -88,7 +81,6 @@ public class PlayerController : MonoBehaviour
                 rb.gravityScale = peakGravityScale;
             } 
             
-
             else
             {
                 rb.gravityScale = jumpGravityScale;
@@ -118,6 +110,15 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        groundedThisFrame = isGrounded();
+
+        if(groundedThisFrame && rb.velocity.y <= 0f && !isStuck)
+        {
+            isJumping = false;
+            jumpTimer = coyoteTime;
+        }
+
+        isStuck = false;
         horizontalMovement();
     }
 
@@ -241,6 +242,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastFrameVelocity;
     private Vector3 lastFramePosition;
 
+    public bool isStuck = false;
     [SerializeField] private GameObject playerSpriteObject; //the child gameobject responsible for the player's sprite and animations
 
     [SerializeField] private float deathYLevel;
