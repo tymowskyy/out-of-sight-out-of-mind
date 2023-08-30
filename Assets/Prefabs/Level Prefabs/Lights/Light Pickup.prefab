@@ -67,8 +67,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00424999, y: -0.0016499758, z: 0}
-    m_Extent: {x: 0.53415, y: 0.52695, z: 0}
+    m_Center: {x: -0.00050002337, y: -0.0010000169, z: 0}
+    m_Extent: {x: 0.5345, y: 0.52820003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -176,7 +176,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.65, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1401050494586167049}
@@ -223,7 +223,7 @@ SpriteRenderer:
   m_SortingLayerID: 211740675
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f88a7d567816e5744bf62d2be09fd7b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7bfefc4750244034e80f93decf483d27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -266,9 +266,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.0044882894}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.26199406
 --- !u!58 &5999293342214226652
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -301,9 +301,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0027802885, y: 0.016389072}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.33441988
 --- !u!50 &8802356598438866003
 Rigidbody2D:
   serializedVersion: 4
