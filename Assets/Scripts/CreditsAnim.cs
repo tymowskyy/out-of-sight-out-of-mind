@@ -8,6 +8,8 @@ public class CreditsAnim : MonoBehaviour
     private void Awake()
     {
         tmpro = GetComponent<TextMeshProUGUI>();
+        textSound = GetComponent<AudioSource>();
+
         charTimer = 0f;
     }
 
@@ -37,6 +39,10 @@ public class CreditsAnim : MonoBehaviour
             if (charTimer >= charDelay)
             {
                 tmpro.text += creditsText[nextCharToDisplay];
+
+                if (char.IsLetterOrDigit(creditsText[nextCharToDisplay]))
+                    textSound.Play();
+
                 charTimer = 0f;
                 nextCharToDisplay++;
             }
@@ -58,15 +64,16 @@ public class CreditsAnim : MonoBehaviour
         }
     }
 
-    private bool done = false;
-
-    private int nextCharToDisplay = 0;
-    private float charTimer;
+    private TextMeshProUGUI tmpro;
+    private AudioSource textSound;
 
     [SerializeField] private float charDelay;
     [SerializeField] private float afterAnimTimeout;
 
-    private TextMeshProUGUI tmpro;
+    private bool done = false;
+
+    private int nextCharToDisplay = 0;
+    private float charTimer;
 
     private const string creditsText = "Thanks for playing!\n\nMusic and audio:\r\nM4K1\r\n\r\nCoding:\r\nGonk\r\nTymowskyy\r\nEnard\r\n\r\nArt:\r\nOrles\r\nM4K1";
 }
