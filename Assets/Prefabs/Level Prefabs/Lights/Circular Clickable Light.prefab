@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7424524801518965703}
   - component: {fileID: 1822557949535961717}
   m_Layer: 0
-  m_Name: Circular Light
+  m_Name: Circular Clickable Light
   m_TagString: LightSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,8 +163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightBulbTexture: {fileID: 5785091721143603721}
   defaultOn: 1
-  onSprite: {fileID: 21300000, guid: 5ad1e43852eaf68499694375efa9ab0f, type: 3}
-  offSprite: {fileID: 21300000, guid: 45bb5738ccb7bae418b40a7239be1a8b, type: 3}
+  onSprite: {fileID: 1170608263, guid: f9ffd988597a7294884f39114f709867, type: 3}
+  offSprite: {fileID: 1748150995, guid: f9ffd988597a7294884f39114f709867, type: 3}
 --- !u!50 &1822557949535961717
 Rigidbody2D:
   serializedVersion: 4
@@ -265,7 +265,7 @@ SpriteRenderer:
   m_SortingLayerID: 1778978885
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5ad1e43852eaf68499694375efa9ab0f, type: 3}
+  m_Sprite: {fileID: 1170608263, guid: f9ffd988597a7294884f39114f709867, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
