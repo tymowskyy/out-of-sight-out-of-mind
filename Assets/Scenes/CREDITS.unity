@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charDelay: 0.07
-  creditsText: Thanks for playing!\n\nMusic and audio:\r\nM4K1\r\n\r\nCoding:\r\nGonk\r\nTymowskyy\r\nEnard\r\n\r\nArt:\r\nOrles\r\nM4K1
+  afterAnimTimeout: 5.2
 --- !u!1 &240005574
 GameObject:
   m_ObjectHideFlags: 0
