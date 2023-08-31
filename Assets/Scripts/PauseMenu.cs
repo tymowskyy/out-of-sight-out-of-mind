@@ -5,27 +5,34 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu instance { get; private set; }
-    public bool isPaused { get; private set; }
+    public bool paused { get; private set; }
     [SerializeField] private GameObject pauseMenu;
 
     private void Awake()
     {
-        isPaused = false;
+        paused = false;
         instance = this;
     }
 
     public void OpenPauseMenu()
     {
-        isPaused = true;
+        paused = true;
+
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
     }
 
     public void ClosePauseMenu()
     {
-        isPaused = false;
+        paused = false;
+
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
+    }
+
+    public bool isPaused()
+    {
+        return paused;
     }
 
     public void ExitToMainMenu()

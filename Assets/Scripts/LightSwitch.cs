@@ -13,7 +13,7 @@ public class LightSwitch : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (InputManager.instance.GetButtonDown("Fire1"))
         {
             if (collider2d.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition))) {
                 toggle();

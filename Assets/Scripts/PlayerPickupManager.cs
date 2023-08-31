@@ -11,7 +11,7 @@ public class PlayerPickupManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.G))
+        if(InputManager.instance.GetKeyDown(KeyCode.G))
         {
             if(currentPickup != null)
                 dropPickup();

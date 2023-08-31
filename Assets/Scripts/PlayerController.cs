@@ -15,9 +15,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(InputManager.instance.GetKeyDown(KeyCode.Escape))
         {
-            if(PauseMenu.instance.isPaused)
+            if(PauseMenu.instance.isPaused())
             {
                 PauseMenu.instance.ClosePauseMenu();
             }
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         updateTimers();
 
         //Input
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = InputManager.instance.GetAxisRaw("Horizontal");
 
         if (horizontalInput != 0f)
         {
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(InputManager.instance.GetKeyDown(KeyCode.Space))
         {
             jumpInputTimer = maxJumpInputDelay;
         }
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = fallingGravityScale;
         }
 
-        if(Input.GetKeyDown(KeyCode.R))
+        if(InputManager.instance.GetKeyDown(KeyCode.R) && !PauseMenu.instance.isPaused())
         {
             StartCoroutine(die());
         }
