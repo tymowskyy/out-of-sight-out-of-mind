@@ -51,6 +51,9 @@ public class PlayerPickupManager : MonoBehaviour
 
         pickupRigidbody.bodyType = RigidbodyType2D.Dynamic;
         pickupRigidbody.AddForce(playerRigidbody.velocity, ForceMode2D.Impulse);
+
+        currentPickup = null;
+        pickupRigidbody = null;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)

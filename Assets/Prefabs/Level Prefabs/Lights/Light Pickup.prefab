@@ -67,8 +67,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00050002337, y: -0.0010000169, z: 0}
-    m_Extent: {x: 0.5345, y: 0.52820003, z: 0}
+    m_Center: {x: 0.0021499991, y: 0.00080001354, z: 0}
+    m_Extent: {x: 0.53485, y: 0.5245, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -266,9 +266,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0044882894}
+  m_Offset: {x: 0.00556612, y: 0.00031369925}
   serializedVersion: 2
-  m_Radius: 0.26199406
+  m_Radius: 0.22720522
 --- !u!58 &5999293342214226652
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -301,9 +301,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0027802885, y: 0.016389072}
+  m_Offset: {x: -0.005717993, y: 0.016389072}
   serializedVersion: 2
-  m_Radius: 0.33441988
+  m_Radius: 0.3931787
 --- !u!50 &8802356598438866003
 Rigidbody2D:
   serializedVersion: 4
