@@ -20,7 +20,7 @@ public class ExitDoor : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision) {
 
         if(collision.CompareTag("Player")) {
             spriteRenderer.sortingLayerName = "Door";
@@ -43,6 +43,11 @@ public class ExitDoor : MonoBehaviour
             playerAnimator.SetFloat("velocityY", 0f);
             playerAnimator.ResetTrigger("onJump");
         }
+    }
+
+    public bool isCloseAnimationPlaying()
+    {
+        return shouldLoadNextLevel;
     }
 
     private bool shouldLoadNextLevel;

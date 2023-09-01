@@ -13,6 +13,13 @@ public class InputManager : MonoBehaviour
         }
 
         instance = this;
+
+        GameObject exitDoorGameObject = GameObject.FindGameObjectWithTag("ExitDoor");
+        
+        if(exitDoorGameObject != null)
+        {
+            exitDoor = exitDoorGameObject.GetComponent<ExitDoor>();
+        }
     }
 
     public float GetAxisRaw(string axis)
@@ -42,8 +49,10 @@ public class InputManager : MonoBehaviour
 
     private bool isInputBlocked()
     {
-        return PauseMenu.instance != null && PauseMenu.instance.isPaused();
+        return (PauseMenu.instance != null && PauseMenu.instance.isPaused()) || (exitDoor != null && exitDoor.isCloseAnimationPlaying());
     }
 
     public static InputManager instance { get; private set; }
+
+    private ExitDoor exitDoor;
 }

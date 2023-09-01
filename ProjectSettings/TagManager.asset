@@ -10,6 +10,7 @@ TagManager:
   - Music
   - LevelManager
   - PlayerFeet
+  - ExitDoor
   layers:
   - Default
   - TransparentFX
