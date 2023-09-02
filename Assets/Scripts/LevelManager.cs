@@ -49,6 +49,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(credits);
     }
 
+    public void LoadBackrooms()
+    {
+        SceneManager.LoadScene("SEX");
+    }
+
     public void LoadNextLevel()
     {
         if(currentLevel == levelSceneNames.Length - 1)

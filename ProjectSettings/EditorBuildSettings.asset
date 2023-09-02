@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CREDITS.unity
     guid: 44348455a9ca6a64ab66928acf09bbfa
+  - enabled: 1
+    path: Assets/Animations/SEX.unity
+    guid: 5654c18d660f61f4fbd6fee227fd279d
   m_configObjects: {}

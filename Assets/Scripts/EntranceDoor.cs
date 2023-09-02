@@ -10,12 +10,12 @@ public class EntranceDoor : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         player = GameObject.FindGameObjectWithTag("Player");
-
-        player.transform.position = doorCenter.position;
+        player.transform.position = doorCenter.transform.position;
     }
 
     private void Start()
     {
+
         player.GetComponent<PlayerController>().enabled = false;
         player.GetComponent<Rigidbody2D>().gravityScale = 0f;
         animator.enabled = true;

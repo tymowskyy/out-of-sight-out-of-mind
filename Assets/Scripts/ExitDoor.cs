@@ -31,13 +31,18 @@ public class ExitDoor : MonoBehaviour
             PlayerController playerController = player.GetComponent<PlayerController>();
             Animator playerAnimator = playerController.getAnimator();
 
+            if(!playerController.enabled)
+            {
+                LevelManager.instance.LoadBackrooms();
+            }
+
             playerController.enabled = false;
 
             player.GetComponent<PlayerPickupManager>().enabled = false;
             player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             player.GetComponent<Rigidbody2D>().gravityScale = 0f;
 
-            player.transform.position = doorCenter.position;
+            player.transform.position = doorCenter.transform.position;
 
             playerAnimator.SetFloat("velocityX", 0f);
             playerAnimator.SetFloat("velocityY", 0f);
