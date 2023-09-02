@@ -684,7 +684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4960089168937403189, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
       propertyPath: defaultOn
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5992603202479533587, guid: 5b672ac7b2e5e41e9a16ec45f4968a5b, type: 3}
       propertyPath: m_Enabled
@@ -803,9 +803,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cycles:
-  - repetitions: 2
-    onDuration: 0.5
-    offDuration: 8
+  - repetitions: 1
+    durations:
+    - 0.2
+    - 12
   lightSources:
   - {fileID: 954689755}
 --- !u!1001 &1034188816

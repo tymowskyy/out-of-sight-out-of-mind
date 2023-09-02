@@ -1522,11 +1522,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cycles:
   - repetitions: 1
-    onDuration: 0.4
-    offDuration: 0.4
-  - repetitions: 1
-    onDuration: 1.2
-    offDuration: 1.2
+    durations:
+    - 0.2
+    - 0.2
+    - 1.2
+    - 1.2
   lightSources:
   - {fileID: 1077789233}
 --- !u!114 &1077789233 stripped

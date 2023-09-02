@@ -394,9 +394,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cycles:
-  - repetitions: 0
-    onDuration: 1.1
-    offDuration: 0
+  - repetitions: 1
+    durations:
+    - 1.1
+    - 1.1
   lightSources:
   - {fileID: 412800780}
   - {fileID: 2128989727}
