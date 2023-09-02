@@ -15,18 +15,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(InputManager.instance.GetKeyDown(KeyCode.Escape))
-        {
-            if(PauseMenu.instance.isPaused())
-            {
-                PauseMenu.instance.ClosePauseMenu();
-            }
-            else
-            {
-                PauseMenu.instance.OpenPauseMenu();
-            }
-        }
-
         //Timers
         updateTimers();
 

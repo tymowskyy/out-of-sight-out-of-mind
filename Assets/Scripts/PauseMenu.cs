@@ -14,6 +14,21 @@ public class PauseMenu : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused())
+            {
+                ClosePauseMenu();
+            }
+            else
+            {
+                OpenPauseMenu();
+            }
+        }
+    }
+
     public void OpenPauseMenu()
     {
         paused = true;
