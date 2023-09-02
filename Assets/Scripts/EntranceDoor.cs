@@ -11,11 +11,11 @@ public class EntranceDoor : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = doorCenter.position;
+        player.GetComponent<PlayerStickingController>().enableUnsticking = false;
     }
 
     private void Start()
     {
-
         player.GetComponent<PlayerController>().enabled = false;
         player.GetComponent<Rigidbody2D>().gravityScale = 0f;
         animator.enabled = true;
@@ -23,6 +23,7 @@ public class EntranceDoor : MonoBehaviour
 
     public void onOpenAnimationEnd()
     {
+        player.GetComponent<PlayerStickingController>().enableUnsticking = true;
         player.GetComponent<PlayerController>().enabled = true;
         player.GetComponent<Rigidbody2D>().gravityScale = 1f;
         animator.enabled = false;

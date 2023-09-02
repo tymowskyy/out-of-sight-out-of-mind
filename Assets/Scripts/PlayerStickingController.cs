@@ -19,7 +19,10 @@ public class PlayerStickingController : MonoBehaviour
     void FixedUpdate()
     {
         if (isStuck) {
-            UnstickPlayer();
+            if (enableUnsticking)
+            {
+                UnstickPlayer();
+            }
             isStuck = false;
         }
     }
@@ -49,6 +52,8 @@ public class PlayerStickingController : MonoBehaviour
 
     [SerializeField] private float beforeDeathTimeout;
 
+
+    public bool enableUnsticking = true;
     public PlayerColliderOffset[] colliderOffsets;
     public  List<int> colliderSegmentCount = new List<int>();
 
