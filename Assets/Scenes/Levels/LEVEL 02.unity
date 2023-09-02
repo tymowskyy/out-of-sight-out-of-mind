@@ -1710,22 +1710,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 825365367678533193, guid: f20d8a57401ae0b4bb99403ca7e4677e, type: 3}
-      propertyPath: jumpStrength
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 825365367678533193, guid: f20d8a57401ae0b4bb99403ca7e4677e, type: 3}
-      propertyPath: jumpGravityScale
-      value: 2.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 825365367678533193, guid: f20d8a57401ae0b4bb99403ca7e4677e, type: 3}
-      propertyPath: peakGravityScale
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 825365367678533193, guid: f20d8a57401ae0b4bb99403ca7e4677e, type: 3}
-      propertyPath: fallingGravityScale
-      value: 2.9
-      objectReference: {fileID: 0}
     - target: {fileID: 3210372933494477998, guid: f20d8a57401ae0b4bb99403ca7e4677e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.5
