@@ -10,7 +10,7 @@ public class EntranceDoor : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = doorCenter.transform.position;
+        player.transform.position = doorCenter.position;
     }
 
     private void Start()
@@ -28,7 +28,7 @@ public class EntranceDoor : MonoBehaviour
         animator.enabled = false;
 
         //set sorting layer to the default one
-        spriteRenderer.sortingLayerName ="Default";
+        spriteRenderer.sortingLayerName = "Default";
     }
 
     private Animator animator;
