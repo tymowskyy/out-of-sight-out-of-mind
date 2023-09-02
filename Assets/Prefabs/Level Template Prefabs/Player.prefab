@@ -190,14 +190,14 @@ MonoBehaviour:
   maxRunSpeed: 6
   accelerationRate: 9
   deccelerationRate: 12
-  jumpStrength: 8
+  jumpStrength: 9
   coyoteTime: 0.15
   maxJumpInputDelay: 0.15
   jumpSqueezeScale: 6
   landSquashScale: 6
   landSquashAnimationTime: 0
-  peakGravityScale: 1.9
-  fallingGravityScale: 2.7
+  peakGravityScale: 1.8
+  fallingGravityScale: 2.9
   jumpGravityScale: 2.1
   feetColliderOffset: {fileID: 6254061733526647404}
   jumpSound: {fileID: 8300000, guid: b8e6170ec2a4fab48a801f09a767b1e3, type: 3}

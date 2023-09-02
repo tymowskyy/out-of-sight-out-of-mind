@@ -396,7 +396,7 @@ MonoBehaviour:
   cycles:
   - repetitions: 0
     onDuration: 1.1
-    offDuration: 1.1
+    offDuration: 0
   lightSources:
   - {fileID: 412800780}
   - {fileID: 2128989727}
