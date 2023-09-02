@@ -31,6 +31,8 @@ public class ExitDoor : MonoBehaviour
             PlayerController playerController = player.GetComponent<PlayerController>();
             Animator playerAnimator = playerController.getAnimator();
 
+            playerController.stopSoundEffects();
+
             if(!playerController.enabled)
             {
                 LevelManager.instance.LoadBackrooms();

@@ -170,6 +170,8 @@ public class PlayerController : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
 
+        stopSoundEffects();
+
         yield return new WaitForSeconds(waitTime);
 
         playerSpriteObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -182,6 +184,11 @@ public class PlayerController : MonoBehaviour
         yield return new WaitWhile(() => audioSource.isPlaying);
 
         LevelManager.instance.RestartLevel();
+    }
+
+    public void stopSoundEffects()
+    {
+        audioSource.Stop();
     }
 
     private bool canJump()
