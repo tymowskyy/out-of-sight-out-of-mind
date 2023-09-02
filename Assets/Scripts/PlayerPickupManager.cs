@@ -37,11 +37,14 @@ public class PlayerPickupManager : MonoBehaviour
         }
 
         pickupRigidbody = pickup.GetComponent<Rigidbody2D>();
+        pickupSpriteRenderer = pickup.GetComponent<SpriteRenderer>();
 
         pickupPhysicsCollider.enabled = false;
 
         pickupRigidbody.velocity = Vector3.zero;
         pickupRigidbody.bodyType = RigidbodyType2D.Kinematic;
+
+        pickupSpriteRenderer.sortingLayerName = "Pickup";
     }
 
     private void dropPickup()
@@ -52,13 +55,15 @@ public class PlayerPickupManager : MonoBehaviour
         pickupRigidbody.bodyType = RigidbodyType2D.Dynamic;
         pickupRigidbody.AddForce(playerRigidbody.velocity, ForceMode2D.Impulse);
 
+        pickupSpriteRenderer.sortingLayerName = "Default";
+
         currentPickup = null;
         pickupRigidbody = null;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Pickup"))
+        if(collision.CompareTag("Pickup") && currentPickup == null)
         {
             grabPickup(collision.gameObject);
         }
@@ -67,6 +72,7 @@ public class PlayerPickupManager : MonoBehaviour
     private GameObject currentPickup;
     private Collider2D pickupPhysicsCollider;
     private Rigidbody2D pickupRigidbody;
+    private SpriteRenderer pickupSpriteRenderer;
 
     private Rigidbody2D playerRigidbody;
 
