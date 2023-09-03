@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handTransform: {fileID: 4052281425727937812}
+  dropBind: 115
 --- !u!70 &6824726429270140250
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
