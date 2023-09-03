@@ -9,6 +9,8 @@ TagManager:
   - PlayerColliderOffset
   - Music
   - LevelManager
+  - PlayerFeet
+  - ExitDoor
   layers:
   - Default
   - TransparentFX
@@ -51,6 +53,9 @@ TagManager:
     locked: 0
   - name: Rail
     uniqueID: 3083342005
+    locked: 0
+  - name: LightConnection
+    uniqueID: 3069782649
     locked: 0
   - name: LightTexture
     uniqueID: 1778978885

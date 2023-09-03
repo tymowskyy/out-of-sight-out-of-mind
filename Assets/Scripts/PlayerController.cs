@@ -15,30 +15,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(PauseMenu.instance.isPaused)
-            {
-                PauseMenu.instance.ClosePauseMenu();
-            }
-            else
-            {
-                PauseMenu.instance.OpenPauseMenu();
-            }
-        }
-
         //Timers
         updateTimers();
-        groundedThisFrame = isGrounded();
-
-        if(groundedThisFrame && rb.velocity.y <= 0f)
-        {
-            isJumping = false;
-            jumpTimer = coyoteTime;
-        }
 
         //Input
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = InputManager.instance.GetAxisRaw("Horizontal");
 
         if (horizontalInput != 0f)
         {
@@ -70,7 +51,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(InputManager.instance.GetKeyDown(KeyCode.Space))
         {
             jumpInputTimer = maxJumpInputDelay;
         }
@@ -88,7 +69,6 @@ public class PlayerController : MonoBehaviour
                 rb.gravityScale = peakGravityScale;
             } 
             
-
             else
             {
                 rb.gravityScale = jumpGravityScale;
@@ -100,7 +80,7 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = fallingGravityScale;
         }
 
-        if(Input.GetKeyDown(KeyCode.R))
+        if(InputManager.instance.GetKeyDown(KeyCode.R) && !PauseMenu.instance.isPaused())
         {
             StartCoroutine(die());
         }
@@ -118,6 +98,15 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        groundedThisFrame = isGrounded();
+
+        if(groundedThisFrame && rb.velocity.y <= 0f && !isStuck)
+        {
+            isJumping = false;
+            jumpTimer = coyoteTime;
+        }
+
+        isStuck = false;
         horizontalMovement();
     }
 
@@ -147,7 +136,7 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("onJump");
         isJumping = true;
 
-        if (audioSource.clip.name != jumpSound.name)
+        if (!audioSource.clip || audioSource.clip.name != jumpSound.name)
         {
             audioSource.clip = jumpSound;
         }
@@ -181,6 +170,8 @@ public class PlayerController : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
 
+        stopSoundEffects();
+
         yield return new WaitForSeconds(waitTime);
 
         playerSpriteObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -195,6 +186,11 @@ public class PlayerController : MonoBehaviour
         LevelManager.instance.RestartLevel();
     }
 
+    public void stopSoundEffects()
+    {
+        audioSource.Stop();
+    }
+
     private bool canJump()
     {
         return jumpTimer > 0f && !isJumping;
@@ -202,17 +198,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded()
     {
-        Collider2D[] results = Physics2D.OverlapBoxAll(groundCheckPos.position, groundCheckSize, 0f, groundLayer);
-
-        foreach(Collider2D hitCollider in results)
-        {
-            if(!hitCollider.isTrigger)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        return feetColliderOffset.index > 0;
     }
 
     private bool shouldPlayRunSound()
@@ -251,6 +237,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastFrameVelocity;
     private Vector3 lastFramePosition;
 
+    public bool isStuck = false;
     [SerializeField] private GameObject playerSpriteObject; //the child gameobject responsible for the player's sprite and animations
 
     [SerializeField] private float deathYLevel;
@@ -276,9 +263,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpGravityScale;
 
     [Header("Checks")]
-    [SerializeField] private Transform groundCheckPos;
-    [SerializeField] private Vector2 groundCheckSize;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private PlayerColliderOffset feetColliderOffset;
 
     [Header("SoundEffects")]
     [SerializeField] private AudioClip jumpSound;

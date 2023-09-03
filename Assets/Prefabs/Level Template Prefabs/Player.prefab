@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3891161968883356140}
-  m_Layer: 0
+  - component: {fileID: 6254061733526647404}
+  - component: {fileID: 6931510412328666739}
+  m_Layer: 10
   m_Name: stopki :3
-  m_TagString: Untagged
+  m_TagString: PlayerFeet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,12 +27,87 @@ Transform:
   m_GameObject: {fileID: 3408592626639416254}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.025, y: -0.4394, z: 0}
+  m_LocalPosition: {x: 0, y: -0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3210372933494477998}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &6254061733526647404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408592626639416254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f61d94202ce4c8b833b9da94a16413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+--- !u!60 &6931510412328666739
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408592626639416254}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.06983566, y: -0.4461813}
+      - {x: 0.11415148, y: -0.436342}
+      - {x: 0.16675234, y: -0.41636485}
+      - {x: 0.20877671, y: -0.3911857}
+      - {x: 0.2417643, y: -0.3650722}
+      - {x: 0.2654686, y: -0.34159166}
+      - {x: 0.28798962, y: -0.31426474}
+      - {x: 0.31261492, y: -0.27425984}
+      - {x: -0.26437163, y: -0.27339828}
+      - {x: -0.23591709, y: -0.31912735}
+      - {x: -0.1959818, y: -0.36319408}
+      - {x: -0.16972971, y: -0.38465488}
+      - {x: -0.13999456, y: -0.40420747}
+      - {x: -0.09856248, y: -0.42492324}
+      - {x: -0.055448413, y: -0.43891937}
+      - {x: -0.014947653, y: -0.44664925}
+      - {x: 0.022174835, y: -0.4488305}
+  m_UseDelaunayMesh: 0
 --- !u!1 &4969506112087716075
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,25 +184,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e031a9c3a8d6345db9879e4ea07bb3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStuck: 0
   playerSpriteObject: {fileID: 5850973607473672994}
   deathYLevel: -10
   maxRunSpeed: 6
   accelerationRate: 9
-  deccelerationRate: 10
-  jumpStrength: 9
+  deccelerationRate: 12
+  jumpStrength: 9.5
   coyoteTime: 0.15
   maxJumpInputDelay: 0.15
   jumpSqueezeScale: 6
   landSquashScale: 6
   landSquashAnimationTime: 0
-  peakGravityScale: 1.8
-  fallingGravityScale: 2.5
-  jumpGravityScale: 2
-  groundCheckPos: {fileID: 3891161968883356140}
-  groundCheckSize: {x: 0.1, y: 0.1}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
+  peakGravityScale: 1.9
+  fallingGravityScale: 3
+  jumpGravityScale: 2.25
+  feetColliderOffset: {fileID: 6254061733526647404}
   jumpSound: {fileID: 8300000, guid: b8e6170ec2a4fab48a801f09a767b1e3, type: 3}
   walkSound: {fileID: 8300000, guid: bb672233f2139ee4db349d2edc323230, type: 3}
   deathSound: {fileID: 8300000, guid: 12f3c006980365749b0a4a71b785ac6f, type: 3}
@@ -154,7 +228,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &8879759049856764483
 MonoBehaviour:
@@ -216,6 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321a36a06d6184892b9edb8d674a0697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beforeDeathTimeout: 0.6
   colliderOffsets:
   - {fileID: 6598519249028200556}
   - {fileID: 4656850774856286319}
@@ -242,7 +317,6 @@ MonoBehaviour:
   - {fileID: 5285867136257067339}
   - {fileID: 4502466275028475530}
   colliderSegmentCount: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  playerController: {fileID: 0}
 --- !u!82 &3797227831319332859
 AudioSource:
   m_ObjectHideFlags: 0
@@ -471,7 +545,7 @@ Transform:
   m_GameObject: {fileID: 7758150660415169551}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36, y: -0.042, z: 0}
+  m_LocalPosition: {x: 0.465, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -11,15 +11,20 @@ public class LightSource : MonoBehaviour
     {
         colliderComp = GetComponent<Collider2D>();
         lightComp = GetComponent<Light2D>();
+
         on = defaultOn;
         colliderComp.enabled = on;
         lightComp.enabled = on;
+
+        setSprite();
     }
 
     public void toggle() {
         on = !on;
         colliderComp.enabled = on;
         lightComp.enabled = on;
+
+        setSprite();
     }
 
     public bool isOn()
@@ -27,9 +32,28 @@ public class LightSource : MonoBehaviour
         return on;
     }
 
-    public SpriteRenderer lightBulbTexture;
+    private void setSprite()
+    {
+        if(lightBulbTexture == null)
+        {
+            return;
+        }
+        if(on)
+        {
+            lightBulbTexture.sprite = onSprite;
+        }
+        else
+        {
+            lightBulbTexture.sprite = offSprite;
+        }
+    }
+
+    [SerializeField] private SpriteRenderer lightBulbTexture;
 
     [SerializeField] private bool defaultOn;
+
+    [SerializeField] private Sprite onSprite;
+    [SerializeField] private Sprite offSprite;
 
     private bool on;
     private Collider2D colliderComp;

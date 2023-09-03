@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class PlayerStickingController : MonoBehaviour
 {
-    public PlayerColliderOffset[] colliderOffsets;
-    public List<int> colliderSegmentCount = new List<int>();
-
-    [SerializeField] private PlayerController playerController;
-    private bool isStuck = false;
-
     void Awake()
     {
         playerController = GetComponent<PlayerController>();
@@ -22,10 +16,13 @@ public class PlayerStickingController : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isStuck) {
-            UnstickPlayer();
+            if (enableUnsticking)
+            {
+                UnstickPlayer();
+            }
             isStuck = false;
         }
     }
@@ -41,11 +38,25 @@ public class PlayerStickingController : MonoBehaviour
             }
         }
 
-        StartCoroutine(playerController.die(1f));
+        if (playerController.enabled)
+        {
+            StartCoroutine(playerController.die(beforeDeathTimeout));
+        }
     }
 
     public void OnPlayerStick()
     {
         isStuck = true;
+        playerController.isStuck = isStuck;
     }
+
+    [SerializeField] private float beforeDeathTimeout;
+
+
+    public bool enableUnsticking = true;
+    public PlayerColliderOffset[] colliderOffsets;
+    public  List<int> colliderSegmentCount = new List<int>();
+
+    private PlayerController playerController;
+    private bool isStuck = false;
 }

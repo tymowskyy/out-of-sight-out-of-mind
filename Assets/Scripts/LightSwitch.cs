@@ -9,16 +9,11 @@ public class LightSwitch : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         collider2d = GetComponent<Collider2D>();
-
-        foreach(LightSource lightSource in lightSources)
-        {
-            setLightBulbTexture(lightSource);
-        }
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (InputManager.instance.GetButtonDown("Fire1"))
         {
             if (collider2d.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition))) {
                 toggle();
@@ -33,20 +28,6 @@ public class LightSwitch : MonoBehaviour
         foreach(LightSource lightSource in lightSources)
         {
             lightSource.toggle();
-
-            setLightBulbTexture(lightSource);
-        }
-    }
-
-    private void setLightBulbTexture(LightSource lightSource)
-    {
-        if (lightSource.isOn())
-        {
-            lightSource.lightBulbTexture.sprite = onTexture;
-        }
-        else
-        {
-            lightSource.lightBulbTexture.sprite = offTexture;
         }
     }
 
@@ -54,6 +35,4 @@ public class LightSwitch : MonoBehaviour
     private Collider2D collider2d;
 
     [SerializeField] private LightSource[] lightSources;
-    [SerializeField] private Sprite onTexture;
-    [SerializeField] private Sprite offTexture;
 }
