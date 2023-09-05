@@ -1405,7 +1405,7 @@ MonoBehaviour:
   settings: {fileID: 1811626985}
   levelSelector: {fileID: 483688151}
   levelButtonPrefab: {fileID: 6303783427016278924, guid: 05a6a9f73ca384dc3a25dff2086e4a1b, type: 3}
-  levelsPerRow: 5
+  levelsPerRow: 7
   levelButtonPadding: 80
   levelStartingYLevel: 60
 --- !u!1 &1104098636
@@ -1710,6 +1710,7 @@ MonoBehaviour:
   - LEVEL 14
   - LEVEL 15
   - LEVEL 16
+  - LEVEL 17
   mainMenu: Main Menu
   credits: CREDITS
   debugMode: 0
