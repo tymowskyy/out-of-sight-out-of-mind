@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1778978885
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 233763022, guid: b59ec1823c4465843a1a63a4615052b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -256,5 +256,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightBulbTexture: {fileID: 2393280132196167606}
   defaultOn: 1
-  onSprite: {fileID: 1170608263, guid: f9ffd988597a7294884f39114f709867, type: 3}
+  onSprite: {fileID: 233763022, guid: b59ec1823c4465843a1a63a4615052b7, type: 3}
   offSprite: {fileID: 1119654919, guid: b59ec1823c4465843a1a63a4615052b7, type: 3}
