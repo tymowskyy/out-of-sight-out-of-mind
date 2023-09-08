@@ -2496,7 +2496,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2979390207942774136, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: tutorialText
-      value: Press <b>G</b> to drop the light source pickup
+      value: Press <b>S</b> to drop the light source pickup
       objectReference: {fileID: 0}
     - target: {fileID: 2979390207942774136, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: displayOnlyOnce

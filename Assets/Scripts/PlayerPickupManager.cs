@@ -11,7 +11,7 @@ public class PlayerPickupManager : MonoBehaviour
 
     private void Update()
     {
-        if(InputManager.instance.GetKeyDown(KeyCode.G))
+        if(InputManager.instance.GetKeyDown(dropBind))
         {
             if(currentPickup != null)
                 dropPickup();
@@ -77,4 +77,5 @@ public class PlayerPickupManager : MonoBehaviour
     private Rigidbody2D playerRigidbody;
 
     [SerializeField] private Transform handTransform;
+    [SerializeField] KeyCode dropBind;
 }

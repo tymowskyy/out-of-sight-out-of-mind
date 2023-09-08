@@ -58,6 +58,7 @@ public class LevelManager : MonoBehaviour
     {
         if(currentLevel == levelSceneNames.Length - 1)
         {
+            lastLevelUnlocked = currentLevel + 1;
             SceneManager.LoadScene(credits);
             return;
         }
