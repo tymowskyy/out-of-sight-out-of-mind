@@ -10,16 +10,11 @@ public class LightSourceTrigger : MonoBehaviour
         wasToggled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void onTrigger() 
     {
-        if(wasToggled && toggleOnlyOnce)
+        if (shouldToggle())
         {
-            return;
-        }
-
-        if(collision.CompareTag("Player"))
-        {
-            foreach(LightSource lightSource in lightSources)
+            foreach (LightSource lightSource in lightSources)
             {
                 lightSource.toggle();
 
@@ -28,8 +23,30 @@ public class LightSourceTrigger : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player") && !reverseToggle)
+        {
+            onTrigger();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player") && reverseToggle)
+        {
+            onTrigger();
+        }
+    }
+
+    private bool shouldToggle()
+    {
+        return !wasToggled || !toggleOnlyOnce;
+    }
+
     private bool wasToggled;
 
     [SerializeField] private LightSource[] lightSources;
     [SerializeField] private bool toggleOnlyOnce;
+    [SerializeField] private bool reverseToggle;
 }
