@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("onJump");
         isJumping = true;
 
-        bool shouldPlayJumpSound = audioSource.time > 0.3f * jumpSound.length || audioSource.clip.name != jumpSound.name;
+        bool shouldPlayJumpSound = !audioSource.isPlaying || audioSource.time > 0.3f * jumpSound.length || audioSource.clip.name != jumpSound.name;
 
         if (shouldPlayJumpSound)
         {
