@@ -136,12 +136,17 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("onJump");
         isJumping = true;
 
-        if (!audioSource.clip || audioSource.clip.name != jumpSound.name)
+        bool shouldPlayJumpSound = audioSource.time > 0.3f * jumpSound.length || audioSource.clip.name != jumpSound.name;
+
+        if (shouldPlayJumpSound)
         {
-            audioSource.clip = jumpSound;
+            if (!audioSource.clip || audioSource.clip.name != jumpSound.name)
+            {
+                audioSource.clip = jumpSound;
+            }
+            audioSource.loop = false;
+            audioSource.Play();
         }
-        audioSource.loop = false;
-        audioSource.Play();
 
         float targetJumpForce = Mathf.Max(jumpStrength, jumpStrength - rb.velocity.y);
         rb.AddForce(Vector2.up * targetJumpForce, ForceMode2D.Impulse);
