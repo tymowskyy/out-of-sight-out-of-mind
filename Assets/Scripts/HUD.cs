@@ -7,6 +7,16 @@ public class HUD : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        int currentLevelId = LevelManager.instance.getCurrentLevelId()+1;
+
+        if(currentLevelId < 10)
+        {
+            levelText.text = "0" + currentLevelId.ToString();
+        } else
+        {
+            levelText.text = currentLevelId.ToString();
+        }
     }
 
     public void setTutorialText(string text)
@@ -22,4 +32,5 @@ public class HUD : MonoBehaviour
     public static HUD instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI tutorialText;
+    [SerializeField] private TextMeshProUGUI levelText;
 }

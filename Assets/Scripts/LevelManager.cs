@@ -79,6 +79,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(activeSceneId);
     }
 
+    public int getCurrentLevelId()
+    {
+        return currentLevel;
+    }
+
     public int getLevelCount()
     {
         return levelSceneNames.Length;
