@@ -5,6 +5,7 @@ public class AudioTransitionTrigger : MonoBehaviour
     private void transitionMusic()
     {
         MusicManager.instance.transitionMusic(newMusicClip, transitionDuration);
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
