@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
         //Input
         horizontalInput = InputManager.instance.GetAxisRaw("Horizontal");
+
+        
 
         if (horizontalInput != 0f)
         {
@@ -85,8 +88,13 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(die());
         }
 
-        handleAnimation();
+        //Handle animation
+        animator.SetFloat("velocityX", Mathf.Abs(horizontalInput));
+        animator.SetFloat("velocityY", rb.velocity.y);
 
+        Debug.Log(horizontalInput);
+
+        //Save information about the current frame
         lastFrameVelocity = rb.velocity;
         lastFramePosition = transform.position;
 
@@ -161,12 +169,6 @@ public class PlayerController : MonoBehaviour
         jumpTimer = Mathf.Max(jumpTimer, 0f);
         jumpInputTimer = Mathf.Max(jumpInputTimer, 0f);
         landSquashTimer = Mathf.Max(landSquashTimer, 0f);
-    }
-
-    private void handleAnimation()
-    {
-        animator.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
-        animator.SetFloat("velocityY", rb.velocity.y);
     }
 
     public IEnumerator die(float waitTime=0f)
