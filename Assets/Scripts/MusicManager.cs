@@ -100,6 +100,9 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private AudioMixer mixer;
     [SerializeField] private string[] mixerGroups;
 
+    [SerializeField] float musicVolumeDifference;
+    [SerializeField] float sfxVolumeDifference;
+
     private AudioSource musicSource;
     private AudioSource secondarySource;
 

@@ -3926,6 +3926,8 @@ MonoBehaviour:
   - MasterVolume
   - MusicVolume
   - SFXVolume
+  musicVolumeDifference: 0.15
+  sfxVolumeDifference: 1
 --- !u!82 &2142158256
 AudioSource:
   m_ObjectHideFlags: 0

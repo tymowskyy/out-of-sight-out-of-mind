@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(UnityEngine.UI.Slider))]
+[RequireComponent(typeof(Slider))]
 public class VolumeSlider : MonoBehaviour
 {
     [SerializeField] string mixerGroup;
-    private UnityEngine.UI.Slider slider;
+    private Slider slider;
     private MusicManager musicManager;
 
     public void Awake()
     {
         musicManager = MusicManager.instance;
-        slider = GetComponent<UnityEngine.UI.Slider>();
+        slider = GetComponent<Slider>();
         slider.value = musicManager.GetVolume(mixerGroup);
         slider.onValueChanged.AddListener(UpdateVolume);
     }

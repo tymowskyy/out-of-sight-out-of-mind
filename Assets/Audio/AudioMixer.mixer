@@ -14,6 +14,26 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &-6667977429143813343
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Intermediate
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 5b86174d9cc75e2478f8fe42cea06d9a
+  m_Children:
+  - {fileID: -3253796052437833160}
+  m_Volume: 1ce02a728bc5f8444b24d8150f533919
+  m_Pitch: ac5d1c97f0a7c294a9f437cbd5378fb4
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -2244951374016701791}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-5576702552958575466
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -52,6 +72,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-2244951374016701791
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 21687c0946ce40649bf51148192afc31
+  m_EffectName: Attenuation
+  m_MixLevel: ee85e67c2b98aa04199a58c91c441880
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -79,6 +113,7 @@ AudioMixerController:
     - d33917cfbedc04f039db0770b9211572
     - e4ac6c077e537455ca774cda6dc794c6
     - 09c20cc9835974a688c0de2d136c9b76
+    - 5b86174d9cc75e2478f8fe42cea06d9a
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -93,7 +128,7 @@ AudioMixerGroupController:
   m_GroupID: d33917cfbedc04f039db0770b9211572
   m_Children:
   - {fileID: -5576702552958575466}
-  - {fileID: -3253796052437833160}
+  - {fileID: -6667977429143813343}
   m_Volume: 044345289829c479494e1be225503602
   m_Pitch: 1d3a24d050f55418488b1f2096f2f958
   m_Send: 00000000000000000000000000000000
@@ -127,6 +162,8 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: d305420d1d36e429ead8b9c8fd9404f4
   m_FloatValues:
+    1ce02a728bc5f8444b24d8150f533919: -10.345207
+    f44d057422462504bb7a95f82da78c50: -5
     d94cd7eaba6764b608fc2c1c17b2e508: 0
   m_TransitionOverrides: {}
 --- !u!244 &8532095253401300346
