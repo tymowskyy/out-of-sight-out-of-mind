@@ -92,8 +92,6 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("velocityX", Mathf.Abs(horizontalInput));
         animator.SetFloat("velocityY", rb.velocity.y);
 
-        Debug.Log(horizontalInput);
-
         //Save information about the current frame
         lastFrameVelocity = rb.velocity;
         lastFramePosition = transform.position;

@@ -1903,7 +1903,7 @@ MonoBehaviour:
   - LEVEL 18
   mainMenu: Main Menu
   credits: CREDITS
-  debugMode: 1
+  debugMode: 0
 --- !u!4 &1262877135
 Transform:
   m_ObjectHideFlags: 0

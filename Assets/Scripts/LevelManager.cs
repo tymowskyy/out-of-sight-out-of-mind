@@ -22,7 +22,12 @@ public class LevelManager : MonoBehaviour
             }
 
             instance = this;
-            currentLevel = 0;
+            currentLevel = lastLevelUnlocked;
+
+            if(lastLevelUnlocked >= levelSceneNames.Length-1)
+            {
+                currentLevel = 0;
+            }
 
             DontDestroyOnLoad(gameObject);
         }
