@@ -24,7 +24,8 @@ public class LevelManager : MonoBehaviour
             instance = this;
             currentLevel = lastLevelUnlocked;
 
-            if(lastLevelUnlocked >= levelSceneNames.Length-1)
+
+            if (lastLevelUnlocked >= levelSceneNames.Length-1)
             {
                 currentLevel = 0;
             }
@@ -61,21 +62,26 @@ public class LevelManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        if(currentLevel == levelSceneNames.Length - 1)
+        if (currentLevel+1 > lastLevelUnlocked)
+        {
+            PlayerPrefs.SetInt("lastLevelUnlocked", currentLevel+1);
+            PlayerPrefs.Save();
+            lastLevelUnlocked = currentLevel+1;
+        }
+
+
+        if (currentLevel == levelSceneNames.Length - 1)
         {
             lastLevelUnlocked = currentLevel + 1;
             SceneManager.LoadScene(credits);
+
+            currentLevel = 0;
+
             return;
         }
 
         SceneManager.LoadScene(levelSceneNames[currentLevel+1]);
         currentLevel++;
-        if (currentLevel > lastLevelUnlocked)
-        {
-            lastLevelUnlocked = currentLevel;
-            PlayerPrefs.SetInt("lastLevelUnlocked", lastLevelUnlocked);
-            PlayerPrefs.Save();
-        }
     }
 
     public void RestartLevel()
