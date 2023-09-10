@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Animations/SEX.unity
     guid: 5654c18d660f61f4fbd6fee227fd279d
+  - enabled: 1
+    path: Assets/Scenes/Levels/LEVEL 18.unity
+    guid: 30a302ca098204842ba4f78fcf34093b
   m_configObjects: {}
