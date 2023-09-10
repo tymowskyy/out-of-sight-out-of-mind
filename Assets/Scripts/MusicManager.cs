@@ -56,14 +56,19 @@ public class MusicManager : MonoBehaviour
         {
             transitionTimer += Time.deltaTime;
 
-            musicSource.volume = Mathf.Max(1f - (transitionTimer / transitionDuration), 0f);
-            secondarySource.volume = Mathf.Min(transitionTimer / transitionDuration, 1f);
+            float newVolume = -1 * (1 / (1 + Mathf.Pow(0.1f, (transitionTimer - 0.5f) * 2f))) + 1;
+
+            musicSource.volume = Mathf.Max(newVolume, 0f);
+            secondarySource.volume = Mathf.Min(1f - newVolume, 1f);
 
             if(transitionTimer >= transitionDuration)
             {
                 AudioSource temp = musicSource;
                 musicSource = secondarySource;
                 secondarySource = temp;
+
+                musicSource.volume = 1f;
+                secondarySource.volume = 0f;
 
                 secondarySource.Stop();
 
@@ -82,6 +87,11 @@ public class MusicManager : MonoBehaviour
     public float GetVolume(string mixerGroup)
     {
         return PlayerPrefs.HasKey(mixerGroup) ? PlayerPrefs.GetFloat(mixerGroup) : 1f;
+    }
+
+    public string getCurrentAudioClipName()
+    {
+        return musicSource.clip.name;
     }
 
     public void transitionMusic(AudioClip newMusicClip, float _transitionDuration)

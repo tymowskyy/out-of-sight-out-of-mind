@@ -91,5 +91,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMusicClip: {fileID: 8300000, guid: e275474db8260d144a39047c33f4cae0, type: 3}
-  transitionDuration: 2
+  transitionDuration: 3.2
   reverseTrigger: 0
