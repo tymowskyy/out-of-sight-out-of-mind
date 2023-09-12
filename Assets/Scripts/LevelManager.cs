@@ -36,15 +36,13 @@ public class LevelManager : MonoBehaviour
 
     public void ContinueGame()
     {
-        SceneManager.LoadScene(levelSceneNames[currentLevel]);
-
-        DiscordRPC.instance.setStatus("In level " + (currentLevel + 1).ToString());
+        LoadCurrentLevel();
     }
 
     public void LoadLevel(int level)
     {
         currentLevel = level;
-        SceneManager.LoadScene(levelSceneNames[level]);
+        LoadCurrentLevel();
     }
 
     public void LoadMainMenu()
@@ -52,6 +50,8 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(mainMenu);
 
         DiscordRPC.instance.setStatus("In the main menu");
+
+        MusicManager.instance.transitionMusic(dumbToaster, transitionDuration);
     }
 
     public void LoadCredits()
@@ -88,10 +88,26 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        SceneManager.LoadScene(levelSceneNames[currentLevel+1]);
         currentLevel++;
 
-        DiscordRPC.instance.setStatus("In level " + (currentLevel+1).ToString());
+        LoadCurrentLevel();
+    }
+
+    private void LoadCurrentLevel()
+    {
+        SceneManager.LoadScene(levelSceneNames[currentLevel]);
+        DiscordRPC.instance.setStatus("In level " + (currentLevel + 1).ToString());
+
+        if(currentLevel == 9)
+        {
+            MusicManager.instance.transitionMusic(ambience, transitionDuration);
+        } else if(currentLevel > 9)
+        {
+            MusicManager.instance.transitionMusic(metalDreams, transitionDuration);
+        } else
+        {
+            MusicManager.instance.transitionMusic(dumbToaster, transitionDuration);
+        }
     }
 
     public void RestartLevel()
@@ -124,4 +140,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string mainMenu;
     [SerializeField] private string credits;
     [SerializeField] private bool debugMode;
+
+    [Header("Music")]
+    [SerializeField] private AudioClip dumbToaster;
+    [SerializeField] private AudioClip ambience;
+    [SerializeField] private AudioClip metalDreams;
+
+    [SerializeField] private float transitionDuration;
 }

@@ -44,7 +44,6 @@ public class DiscordRPC : MonoBehaviour
     private void updateRPC()
     {
         try {
-            Debug.Log(status);
             ActivityManager activityManager = discord.GetActivityManager();
             Activity activity = new Discord.Activity
             {

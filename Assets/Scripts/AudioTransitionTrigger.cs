@@ -4,9 +4,7 @@ public class AudioTransitionTrigger : MonoBehaviour
 {
     private void transitionMusic()
     {
-        if(MusicManager.instance.getCurrentAudioClipName() != newMusicClip.name)
-            MusicManager.instance.transitionMusic(newMusicClip, transitionDuration);
-
+        MusicManager.instance.transitionMusic(newMusicClip, transitionDuration);
         gameObject.SetActive(false);
     }
 

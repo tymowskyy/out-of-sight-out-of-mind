@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applicationId: 1150819180992544848
   largeText: Out Of Sight, Out Of Mind
-  details: In the main menu
+  status: 
 --- !u!1 &722780318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,8 +1226,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 39
+  m_fontSizeBase: 39
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -56.12357, y: 33.134296, z: 0, w: 0}
+  m_margin: {x: -8.933994, y: 68.45645, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1951,6 +1951,10 @@ MonoBehaviour:
   mainMenu: Main Menu
   credits: CREDITS
   debugMode: 0
+  dumbToaster: {fileID: 8300000, guid: 9b104a9237f00a34fa83267bebd72e8c, type: 3}
+  ambience: {fileID: 8300000, guid: 34b4b6d2d70b69b458db6ab058e05e64, type: 3}
+  metalDreams: {fileID: 8300000, guid: 34f13ab4de39a814d9f60669ca7ac909, type: 3}
+  transitionDuration: 3.2
 --- !u!4 &1262877135
 Transform:
   m_ObjectHideFlags: 0

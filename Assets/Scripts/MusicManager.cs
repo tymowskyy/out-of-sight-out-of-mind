@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -96,6 +97,11 @@ public class MusicManager : MonoBehaviour
 
     public void transitionMusic(AudioClip newMusicClip, float _transitionDuration)
     {
+        if(newMusicClip.name == musicSource.clip.name)
+        {
+            return;
+        }
+
         secondarySource.clip = newMusicClip;
         secondarySource.Play();
 
