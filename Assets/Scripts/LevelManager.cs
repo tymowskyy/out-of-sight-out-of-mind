@@ -51,7 +51,7 @@ public class LevelManager : MonoBehaviour
 
         DiscordRPC.instance.setStatus("In the main menu");
 
-        MusicManager.instance.transitionMusic(dumbToaster, transitionDuration);
+        MusicManager.instance.transitionMusic(dumbToaster, dumbToasterTransitionDuration);
     }
 
     public void LoadCredits()
@@ -100,13 +100,13 @@ public class LevelManager : MonoBehaviour
 
         if(currentLevel == 9)
         {
-            MusicManager.instance.transitionMusic(ambience, transitionDuration);
+            MusicManager.instance.transitionMusic(ambience, ambienceTransitionDuration);
         } else if(currentLevel > 9)
         {
-            MusicManager.instance.transitionMusic(metalDreams, transitionDuration);
+            MusicManager.instance.transitionMusic(metalDreams, metalDreamsTransitionDuration);
         } else
         {
-            MusicManager.instance.transitionMusic(dumbToaster, transitionDuration);
+            MusicManager.instance.transitionMusic(dumbToaster, dumbToasterTransitionDuration);
         }
     }
 
@@ -146,5 +146,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private AudioClip ambience;
     [SerializeField] private AudioClip metalDreams;
 
-    [SerializeField] private float transitionDuration;
+    [SerializeField] private float dumbToasterTransitionDuration;
+    [SerializeField] private float ambienceTransitionDuration;
+    [SerializeField] private float metalDreamsTransitionDuration;
 }
