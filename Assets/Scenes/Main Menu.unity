@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 709931915}
   m_Layer: 0
   m_Name: DiscordManager
-  m_TagString: Untagged
+  m_TagString: DiscordManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4100,7 +4100,7 @@ AudioSource:
   m_GameObject: {fileID: 2142158254}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5576702552958575466, guid: 965e83ce02ef941b6855c689e77f2d4e, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0
