@@ -37,6 +37,8 @@ public class LevelManager : MonoBehaviour
     public void ContinueGame()
     {
         SceneManager.LoadScene(levelSceneNames[currentLevel]);
+
+        DiscordRPC.instance.setStatus("In level " + (currentLevel + 1).ToString());
     }
 
     public void LoadLevel(int level)
@@ -48,16 +50,22 @@ public class LevelManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(mainMenu);
+
+        DiscordRPC.instance.setStatus("In the main menu");
     }
 
     public void LoadCredits()
     {
         SceneManager.LoadScene(credits);
+
+        DiscordRPC.instance.setStatus("Watching the credits");
     }
 
     public void LoadBackrooms()
     {
         SceneManager.LoadScene("SEX");
+
+        DiscordRPC.instance.setStatus(":3");
     }
 
     public void LoadNextLevel()
@@ -73,7 +81,7 @@ public class LevelManager : MonoBehaviour
         if (currentLevel == levelSceneNames.Length - 1)
         {
             lastLevelUnlocked = currentLevel + 1;
-            SceneManager.LoadScene(credits);
+            LoadCredits();
 
             currentLevel = 0;
 
@@ -82,6 +90,8 @@ public class LevelManager : MonoBehaviour
 
         SceneManager.LoadScene(levelSceneNames[currentLevel+1]);
         currentLevel++;
+
+        DiscordRPC.instance.setStatus("In level " + (currentLevel+1).ToString());
     }
 
     public void RestartLevel()

@@ -11,6 +11,7 @@ TagManager:
   - LevelManager
   - PlayerFeet
   - ExitDoor
+  - DiscordManager
   layers:
   - Default
   - TransparentFX
