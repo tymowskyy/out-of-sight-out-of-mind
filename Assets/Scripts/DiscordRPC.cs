@@ -21,7 +21,14 @@ public class DiscordRPC : MonoBehaviour
 
     private void Start()
     {
-        discord = new Discord.Discord(applicationId, (ulong)Discord.CreateFlags.NoRequireDiscord);
+        try
+        {
+            discord = new Discord.Discord(applicationId, (ulong)Discord.CreateFlags.NoRequireDiscord);
+        } catch
+        {
+
+        }
+
         startTime = System.DateTimeOffset.Now.ToUnixTimeMilliseconds();
     }
 
@@ -34,7 +41,13 @@ public class DiscordRPC : MonoBehaviour
 
         catch
         {
-            Destroy(gameObject);
+            try
+            {
+                discord = new Discord.Discord(applicationId, (ulong)Discord.CreateFlags.NoRequireDiscord);
+            } catch
+            {
+
+            }
             return;
         }
 
