@@ -59,15 +59,11 @@ public class MusicManager : MonoBehaviour
 
             float newVolume = -1 * (1 / (1 + Mathf.Pow(0.1f, (transitionTimer - 0.5f) * 2f))) + 1;
 
-            musicSource.volume = Mathf.Max(newVolume, 0f);
-            secondarySource.volume = Mathf.Min(1f - newVolume, 1f);
+            secondarySource.volume = Mathf.Max(newVolume, 0f);
+            musicSource.volume = Mathf.Min(1f - newVolume, 1f);
 
             if(transitionTimer >= transitionDuration)
             {
-                AudioSource temp = musicSource;
-                musicSource = secondarySource;
-                secondarySource = temp;
-
                 musicSource.volume = 1f;
                 secondarySource.volume = 0f;
 
@@ -102,7 +98,17 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
-        secondarySource.clip = newMusicClip;
+        float timePassed = musicSource.time;
+
+        secondarySource.clip = musicSource.clip;
+        secondarySource.volume = 1f;
+
+        secondarySource.time = timePassed;
+
+        musicSource.clip = newMusicClip;
+        musicSource.volume = 0f;
+
+        musicSource.Play();
         secondarySource.Play();
 
         transitionDuration = _transitionDuration;
