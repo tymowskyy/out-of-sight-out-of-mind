@@ -38,9 +38,13 @@ public class ExitDoor : MonoBehaviour
                 LevelManager.instance.LoadBackrooms();
             }
 
+            PlayerPickupManager playerPickupManager = player.GetComponent<PlayerPickupManager>();
+
+            playerPickupManager.getHand().SetActive(false);
+
             playerController.enabled = false;
 
-            player.GetComponent<PlayerPickupManager>().enabled = false;
+            playerPickupManager.enabled = false;
             player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             player.GetComponent<Rigidbody2D>().gravityScale = 0f;
 
