@@ -1930,7 +1930,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2979390207942774136, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: tutorialText
-      value: SEX ISNT REAL
+      value: NOTHING IS REAL
       objectReference: {fileID: 0}
     - target: {fileID: 6042940983749190113, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1977,9 +1977,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6099920251108841752, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099920251108841752, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f18867b113f4dcb4fbabe52f2e792a0e, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6099920251108841752, guid: 93cf1b786c09c3240913dc552987b4b6, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
