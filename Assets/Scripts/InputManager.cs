@@ -52,7 +52,7 @@ public class InputManager : MonoBehaviour
         return Input.GetButtonUp(button) && !isInputBlocked();
     }
 
-    private bool isInputBlocked()
+    public bool isInputBlocked()
     {
         return (PauseMenu.instance != null && PauseMenu.instance.isPaused()) || (exitDoor != null && exitDoor.isCloseAnimationPlaying());
     }

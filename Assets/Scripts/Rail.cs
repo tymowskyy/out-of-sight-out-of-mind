@@ -32,7 +32,7 @@ public class Rail : MonoBehaviour
             isDragging = false;
         }
         
-        if (isDragging)
+        if (isDragging && !InputManager.instance.isInputBlocked())
         {
             head.transform.position = PointToSegmentProjecion(mousePos - mouseOffset, railStart.position, railEnd.position);
         }
