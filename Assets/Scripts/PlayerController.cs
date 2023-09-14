@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
         //Input
         horizontalInput = InputManager.instance.GetAxisRaw("Horizontal");
+
+        
 
         if (horizontalInput != 0f)
         {
@@ -85,8 +88,11 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(die());
         }
 
-        handleAnimation();
+        //Handle animation
+        animator.SetFloat("velocityX", Mathf.Abs(horizontalInput));
+        animator.SetFloat("velocityY", rb.velocity.y);
 
+        //Save information about the current frame
         lastFrameVelocity = rb.velocity;
         lastFramePosition = transform.position;
 
@@ -136,12 +142,17 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("onJump");
         isJumping = true;
 
-        if (!audioSource.clip || audioSource.clip.name != jumpSound.name)
+        bool shouldPlayJumpSound = !audioSource.isPlaying || audioSource.time > 0.3f * jumpSound.length || audioSource.clip.name != jumpSound.name;
+
+        if (shouldPlayJumpSound)
         {
-            audioSource.clip = jumpSound;
+            if (!audioSource.clip || audioSource.clip.name != jumpSound.name)
+            {
+                audioSource.clip = jumpSound;
+            }
+            audioSource.loop = false;
+            audioSource.Play();
         }
-        audioSource.loop = false;
-        audioSource.Play();
 
         float targetJumpForce = Mathf.Max(jumpStrength, jumpStrength - rb.velocity.y);
         rb.AddForce(Vector2.up * targetJumpForce, ForceMode2D.Impulse);
@@ -156,12 +167,6 @@ public class PlayerController : MonoBehaviour
         jumpTimer = Mathf.Max(jumpTimer, 0f);
         jumpInputTimer = Mathf.Max(jumpInputTimer, 0f);
         landSquashTimer = Mathf.Max(landSquashTimer, 0f);
-    }
-
-    private void handleAnimation()
-    {
-        animator.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
-        animator.SetFloat("velocityY", rb.velocity.y);
     }
 
     public IEnumerator die(float waitTime=0f)

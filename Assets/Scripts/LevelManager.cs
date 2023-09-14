@@ -22,7 +22,13 @@ public class LevelManager : MonoBehaviour
             }
 
             instance = this;
-            currentLevel = 0;
+            currentLevel = lastLevelUnlocked;
+
+
+            if (lastLevelUnlocked >= levelSceneNames.Length-1)
+            {
+                currentLevel = 0;
+            }
 
             DontDestroyOnLoad(gameObject);
         }
@@ -30,46 +36,77 @@ public class LevelManager : MonoBehaviour
 
     public void ContinueGame()
     {
-        SceneManager.LoadScene(levelSceneNames[currentLevel]);
+        LoadCurrentLevel();
     }
 
     public void LoadLevel(int level)
     {
         currentLevel = level;
-        SceneManager.LoadScene(levelSceneNames[level]);
+        LoadCurrentLevel();
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(mainMenu);
+
+        DiscordRPC.instance.setStatus("In the main menu");
+
+        MusicManager.instance.transitionMusic(dumbToaster, dumbToasterTransitionDuration);
     }
 
     public void LoadCredits()
     {
         SceneManager.LoadScene(credits);
+
+        DiscordRPC.instance.setStatus("Watching the credits");
     }
 
     public void LoadBackrooms()
     {
-        SceneManager.LoadScene("SEX");
+        SceneManager.LoadScene("Backrooms");
+
+        DiscordRPC.instance.setStatus(":3");
     }
 
     public void LoadNextLevel()
     {
-        if(currentLevel == levelSceneNames.Length - 1)
+        if (currentLevel+1 > lastLevelUnlocked)
+        {
+            PlayerPrefs.SetInt("lastLevelUnlocked", currentLevel+1);
+            PlayerPrefs.Save();
+            lastLevelUnlocked = currentLevel+1;
+        }
+
+
+        if (currentLevel == levelSceneNames.Length - 1)
         {
             lastLevelUnlocked = currentLevel + 1;
-            SceneManager.LoadScene(credits);
+            LoadCredits();
+
+            currentLevel = 0;
+
             return;
         }
 
-        SceneManager.LoadScene(levelSceneNames[currentLevel+1]);
         currentLevel++;
-        if (currentLevel > lastLevelUnlocked)
+
+        LoadCurrentLevel();
+    }
+
+    private void LoadCurrentLevel()
+    {
+        SceneManager.LoadScene(levelSceneNames[currentLevel]);
+        DiscordRPC.instance.setStatus("In level " + (currentLevel + 1).ToString());
+
+        if(currentLevel == 9)
         {
-            lastLevelUnlocked = currentLevel;
-            PlayerPrefs.SetInt("lastLevelUnlocked", lastLevelUnlocked);
-            PlayerPrefs.Save();
+            MusicManager.instance.transitionMusic(ambience, ambienceTransitionDuration);
+        } else if(currentLevel > 9)
+        {
+            MusicManager.instance.transitionMusic(metalDreams, metalDreamsTransitionDuration);
+        } else
+        {
+            MusicManager.instance.transitionMusic(dumbToaster, dumbToasterTransitionDuration);
         }
     }
 
@@ -77,6 +114,11 @@ public class LevelManager : MonoBehaviour
     {
         int activeSceneId = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(activeSceneId);
+    }
+
+    public int getCurrentLevelId()
+    {
+        return currentLevel;
     }
 
     public int getLevelCount()
@@ -98,4 +140,13 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string mainMenu;
     [SerializeField] private string credits;
     [SerializeField] private bool debugMode;
+
+    [Header("Music")]
+    [SerializeField] private AudioClip dumbToaster;
+    [SerializeField] private AudioClip ambience;
+    [SerializeField] private AudioClip metalDreams;
+
+    [SerializeField] private float dumbToasterTransitionDuration;
+    [SerializeField] private float ambienceTransitionDuration;
+    [SerializeField] private float metalDreamsTransitionDuration;
 }

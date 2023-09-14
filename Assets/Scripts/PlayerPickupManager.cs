@@ -20,7 +20,7 @@ public class PlayerPickupManager : MonoBehaviour
 
     private void grabPickup(GameObject pickup)
     {
-        pickup.transform.SetParent(transform);
+        pickup.transform.SetParent(handTransform);
         pickup.transform.position = handTransform.position;
 
         currentPickup = pickup.gameObject;
@@ -59,6 +59,11 @@ public class PlayerPickupManager : MonoBehaviour
 
         currentPickup = null;
         pickupRigidbody = null;
+    }
+
+    public GameObject getHand()
+    {
+        return handTransform.gameObject;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)

@@ -5,10 +5,13 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
+[RequireComponent(typeof(Image))]
 public class ButtonFontHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] Color colorDefault;
-    [SerializeField] Color colorHover;
+    public Color colorDefault;
+    public Color colorHover;
+    public Sprite spriteDefault;
+    public Sprite spriteHover;
 
     public void Awake()
     {
@@ -18,11 +21,12 @@ public class ButtonFontHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerEnter(PointerEventData eventData)
     {
         GetComponentInChildren<TextMeshProUGUI>().color = colorHover;
+        GetComponent<Image>().sprite  = spriteHover;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        GetComponentInChildren<TextMeshProUGUI>().color = colorDefault;
+        ResetColor();
     }
 
     void OnDisable()
@@ -33,5 +37,6 @@ public class ButtonFontHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
     private void ResetColor()
     {
         GetComponentInChildren<TextMeshProUGUI>().color = colorDefault;
+        GetComponent<Image>().sprite = spriteDefault;
     }
 }

@@ -45,6 +45,9 @@ public class MainMenu : MonoBehaviour
         {
             levelButton.GetComponent<Button>().interactable = false;
             levelButton.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+            ButtonFontHover buttonFontHover = levelButton.GetComponent<ButtonFontHover>();
+            buttonFontHover.colorDefault = buttonFontHover.colorHover;
+            buttonFontHover.spriteDefault = buttonFontHover.spriteHover;
         }
     }
 

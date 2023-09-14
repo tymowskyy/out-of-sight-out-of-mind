@@ -8,6 +8,7 @@ public class Rail : MonoBehaviour
     public Transform railEnd;
     public GameObject head;
     private bool isDragging = false;
+    private Vector3 mouseOffset;
 
     private void Start()
     {
@@ -17,22 +18,23 @@ public class Rail : MonoBehaviour
     private void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetButtonDown("Fire1"))
+        if (InputManager.instance.GetButtonDown("Fire1"))
         {
             if(head.GetComponent<Collider2D>().OverlapPoint(mousePos))
             {
                 isDragging = true;
+                mouseOffset = mousePos - head.transform.position;
             }
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        if (InputManager.instance.GetButtonUp("Fire1"))
         {
             isDragging = false;
         }
         
-        if (isDragging)
+        if (isDragging && !InputManager.instance.isInputBlocked())
         {
-            head.transform.position = PointToSegmentProjecion(mousePos, railStart.position, railEnd.position);
+            head.transform.position = PointToSegmentProjecion(mousePos - mouseOffset, railStart.position, railEnd.position);
         }
     }
 
