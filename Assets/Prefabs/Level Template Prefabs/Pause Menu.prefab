@@ -97,7 +97,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -148,6 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorDefault: {r: 0, g: 0, b: 0, a: 1}
   colorHover: {r: 1, g: 1, b: 1, a: 1}
+  spriteDefault: {fileID: -306965001, guid: b49de23398c5643858529adf2a5470b8, type: 3}
+  spriteHover: {fileID: -858815800, guid: b49de23398c5643858529adf2a5470b8, type: 3}
 --- !u!1 &220289862954500241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1109,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1158,6 +1160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorDefault: {r: 0, g: 0, b: 0, a: 1}
   colorHover: {r: 1, g: 1, b: 1, a: 1}
+  spriteDefault: {fileID: -306965001, guid: b49de23398c5643858529adf2a5470b8, type: 3}
+  spriteHover: {fileID: -858815800, guid: b49de23398c5643858529adf2a5470b8, type: 3}
 --- !u!1 &8357470543018209134
 GameObject:
   m_ObjectHideFlags: 0
