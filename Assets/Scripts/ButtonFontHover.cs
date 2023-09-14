@@ -8,10 +8,10 @@ using TMPro;
 [RequireComponent(typeof(Image))]
 public class ButtonFontHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] Color colorDefault;
-    [SerializeField] Color colorHover;
-    [SerializeField] Sprite spriteDefault;
-    [SerializeField] Sprite spriteHover;
+    public Color colorDefault;
+    public Color colorHover;
+    public Sprite spriteDefault;
+    public Sprite spriteHover;
 
     public void Awake()
     {
