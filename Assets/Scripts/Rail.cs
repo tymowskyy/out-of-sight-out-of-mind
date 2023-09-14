@@ -8,6 +8,7 @@ public class Rail : MonoBehaviour
     public Transform railEnd;
     public GameObject head;
     private bool isDragging = false;
+    private Vector3 mouseOffset;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class Rail : MonoBehaviour
             if(head.GetComponent<Collider2D>().OverlapPoint(mousePos))
             {
                 isDragging = true;
+                mouseOffset = mousePos - head.transform.position;
             }
         }
 
@@ -32,7 +34,7 @@ public class Rail : MonoBehaviour
         
         if (isDragging)
         {
-            head.transform.position = PointToSegmentProjecion(mousePos, railStart.position, railEnd.position);
+            head.transform.position = PointToSegmentProjecion(mousePos - mouseOffset, railStart.position, railEnd.position);
         }
     }
 
