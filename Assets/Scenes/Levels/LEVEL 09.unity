@@ -397,19 +397,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 8a0a8b3edcf1141538aeae7e5ab41277, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.5417
+      value: 0.54495
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 8a0a8b3edcf1141538aeae7e5ab41277, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: -2.9213
+      value: -2.9307
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 8a0a8b3edcf1141538aeae7e5ab41277, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 2.6307
+      value: 2.63485
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 8a0a8b3edcf1141538aeae7e5ab41277, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 2.5633001
+      value: 2.5686
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 8a0a8b3edcf1141538aeae7e5ab41277, type: 3}
       propertyPath: m_ShapePath.Array.data[0].x
@@ -417,7 +417,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 8a0a8b3edcf1141538aeae7e5ab41277, type: 3}
       propertyPath: m_ShapePath.Array.data[0].y
-      value: -5.3121414
+      value: -5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815859930331055877, guid: 8a0a8b3edcf1141538aeae7e5ab41277, type: 3}
+      propertyPath: m_ShapePath.Array.data[1].y
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 2815859930331055877, guid: 8a0a8b3edcf1141538aeae7e5ab41277, type: 3}
       propertyPath: m_ShapePath.Array.data[2].x
