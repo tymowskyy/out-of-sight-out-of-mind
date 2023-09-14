@@ -17,7 +17,7 @@ public class Rail : MonoBehaviour
     private void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetButtonDown("Fire1"))
+        if (InputManager.instance.GetButtonDown("Fire1"))
         {
             if(head.GetComponent<Collider2D>().OverlapPoint(mousePos))
             {
@@ -25,7 +25,7 @@ public class Rail : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        if (InputManager.instance.GetButtonUp("Fire1"))
         {
             isDragging = false;
         }
